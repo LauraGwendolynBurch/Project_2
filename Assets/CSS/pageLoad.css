@@ -1,0 +1,121 @@
+body {
+	color: rgba(221, 221, 221, 1);
+	background-image: url(/Assets/Media/falls.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0px -58px;
+}
+
+.hiddenElement {
+	display: none;
+}
+
+header {
+	align-items: center;
+}
+
+#pgLh1 {
+	position: fixed;
+	bottom: 285px;
+	left: 32px;
+	color: #b8bfca;
+	font-weight: 500;
+	text-shadow: -2px -7px 0px seagreen;
+}
+
+#pageLoadContent {
+	position: fixed;
+	bottom: 125px;
+	left: 25px;
+	background:linear-gradient(to bottom,rgba(255,255,255,0)  5%, #3b6199 20%);
+	background:linear-gradient(to bottom, #8da3c2 5%,  rgba(255,255,255,0) 100%);
+	opacity: 0.9;
+	color: rgba(221, 221, 221, 1);
+	width: 100%;
+	/* padding: 25px; */
+	font-size: 25px;
+	box-shadow: opacity(0.7), rgba(0.2, 0, 0, 0.7);
+
+}
+
+#logo1 {
+	color: rgb(122, 103, 16);
+	font-weight: 700;
+}
+
+#logo2 {
+	color: rgb(67, 32, 78);
+}
+
+#logo3 {
+	color: black;
+	font-weight: bolder;
+}
+
+#logo1, #logo2, #logo3 {
+	font-size: larger;
+}
+
+/* Video Control Button Styles */
+.demo {
+	position: fixed;
+	bottom: 292px;
+	left: 250px;
+	box-shadow: inset 0px 0px 0px 0px #3dc21b;
+	background-color: transparent;
+	border-radius: 15px;
+	border: 2px solid #3b8278;
+	display: inline-block;
+	cursor: pointer;
+	color: #62a89c;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 8px 16px;
+	text-decoration: none;
+	text-shadow: 4.2px -6.35px 0px #285066;
+}
+
+.demo:hover {
+	background-color: transparent;
+}
+
+.demo:active {
+	position: relative;
+	top: 1px;
+}
+
+.container {
+	position: fixed;
+	top: 51px;
+	left: 282px;
+}
+
+/* .playPause {
+	position: fixed;
+	top: 5px;
+	left: 5px;
+	box-shadow:inset 0px 0px 0px 0px #3dc21b;
+	background-color: transparent;
+	border-radius: 15px;
+	border: 2px solid #3b8278;
+	display: inline-block;
+	cursor: pointer;
+	color: #62a89c;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 8px 16px;
+	text-decoration: none;
+	text-shadow: 4px -6.25px 0px #285066;
+}
+
+.playPause:hover {
+	background-color: transparent;
+}
+
+.playPause:active {
+	position: relative;
+  	top: 2px;
+  	left: 5px;
+} */

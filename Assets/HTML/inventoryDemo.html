@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inventory</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
+        
+        <style type="text/css">
+            img{
+                width: 160px;
+                height: 150px;
+            }
+
+            thead{
+                text-shadow: 0px 0px 10px rgba(37, 51, 88, 0.3), 0px 0px 30px rrgba(37, 51, 88, 0.3), 0px 0px 50px rgba(37, 51, 88, 0.3), 0px 0px 180px rgba(255,255,255,0.3);
+                color: rgb(221, 221, 221); /* rgba(255,255,255,0) Hard to read questions.  I need to adjust text-shadow.*/
+                background:linear-gradient(to bottom,rgba(255,255,255,0)  5%, #292b2e 100%);
+                background:linear-gradient(to bottom, #292b2e 5%,  rgba(255,255,255,0) 100%);
+            }
+        </style>
+    </head>
+    
+    <body style="color: white; background-image: url(/Assets/Media/climbTrail.png); background-repeat: no-repeat; background-size: cover;">
+        <div class="container">
+            <h2 align="center">Inventory Checklist</h2>
+            <table class="table table-border" align="center" style="font-weight: bold;">
+                <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>M/N</th>
+                        <th>P/N</th>
+                        <th>Item Image</th>
+                        <th>Item</th>
+                        <th>Cureent Supply Quantity</th>
+                        <th>Unit cost</th>
+                        <th>Order</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                
+                
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="/Assets/Media/demo/compass.jpg"> </td>
+                        <td>Compass </td>
+                        <td id="q1"></td>
+                        <td id="cost1">$719.<sup>99</sup></td>
+                        <td><input oninput="disp1()" type="text" name="ago" id="order1"></td>
+                        <td id="total1"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>2</td>
+                        <td><img src="/Assets/Media/demo/watch.jpeg"></td>
+                        <td>Wrist Watch</td>
+                        <td id="q2"></td>
+                        <td id="cost2">$550.<sup>00</sup></td>
+                        <td><input oninput="disp2()" type="text" name="bag" id="order2"></td>
+                        <td id="total2"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>3</td>
+                        <td><img src="/Assets/Media/demo/VertuSignatureTouch.jpg"></td>
+                        <td>Phone</td>
+                        <td id="q3"></td>
+                        <td id="cost3">$11,000.<sup>00</sup></td>
+                        <td><input oninput="disp3()" type="text" name="phone" id="order3"></td>
+                        <td id="total3"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>4</td>
+                        <td><img src="/Assets/Media/demo/MBP.jpg"></td>
+                        <td>MacBook Pro</td>
+                        <td id="q4"></td>
+                        <td id="cost4">$2,500.<sup>00</sup></td>
+                        <td><input oninput="disp4()" type="text" name="laptop" id="order4"></td>
+                        <td id="total4"></td>
+                    </tr><script> (f=="b") {document.getElementById('cover').src=document.getElementById('b1').src }</script>
+                    
+                    <tr>
+                        <td>5</td>
+                        <td><img src="/Assets/Media/demo/flare.jpg"></td>
+                        <td>Flare</td>
+                        <td id="q5"></td>
+                        <td id="cost5">$154.<sup>00</sup></td>
+                        <td><input oninput="disp5()" type="text" name="vr" id="order5"></td>
+                        <td id="total5"></td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+
+    </body>
+</html>
+
+<script type="text/javascript">
+	function disp1() 
+	{
+		document.getElementById('q1').innerHTML=30-order1.value
+		document.getElementById('total1').innerHTML=order1.value*document.getElementById('cost1').innerHTML
+
+	}
+
+</script>
