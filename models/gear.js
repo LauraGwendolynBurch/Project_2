@@ -1,30 +1,50 @@
 module.exports = function(sequelize, DataTypes) {
-    var Gear = sequelize.define("Post", {
-      name: {
+    var Gear = sequelize.define("addGear", {
+      itemName: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
           len: [1]
         }
       },
-      description: {
+      itemDescription: {
         type: DataTypes.TEXT,
         allowNull: false,
         len: [1]
       },
-      quantity: {
+      itemWeight: {
         type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
             isInt: true,
             min: 0
-        }  
-      }
+        }
+      },
+      itemStorageLocationion: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        len: [1]
+      },
+      itemQuantityInStorage: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+            isInt: true,
+            min: 0
+        }
+      },
+        itemQuantityInPackingList: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+          validate: {
+              isInt: true,
+              min: 0
+          }  
+      },
+      // Is this where we put in the boolean value? Is it a column...? -Gavin
     });
   
     Gear.associate = function(models) {
-      // We're saying that a Post should belong to an Author
-      // A Post can't be created without an Author due to the foreign key constraint
       Gear.belongsTo(models.User, {
         foreignKey: {
           allowNull: false
