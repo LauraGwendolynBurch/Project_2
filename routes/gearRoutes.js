@@ -1,4 +1,4 @@
-// var db = require("../models");
+var db = require("../models");
 
 // // Gear Routes
 module.exports = function(app) {
