@@ -29,9 +29,7 @@ module.exports = function(app) {
         db.Gear.findAll({
             where: { 
                 query,
-                include: [
-                    db.User,
-                ],
+                include: [db.User],
                 itemQuantityInPackingList: {
                     [db.gt]: 0
                 }
