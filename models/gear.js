@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Gear = sequelize.define("addGear", {
+    var Gear = sequelize.define("Gear", {
       itemName: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -33,13 +33,13 @@ module.exports = function(sequelize, DataTypes) {
             min: 0
         }
       },
-        itemQuantityInPackingList: {
-          type: DataTypes.INTEGER,
-          allowNull: false,
-          validate: {
-              isInt: true,
-              min: 0
-          }  
+      itemQuantityInPackingList: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+            isInt: true,
+            min: 0
+        }  
       },
       // Is this where we put in the boolean value? Is it a column...? -Gavin
     });
