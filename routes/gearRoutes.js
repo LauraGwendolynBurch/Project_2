@@ -1,7 +1,7 @@
 // var db = require("../models");
 
 // // Gear Routes
-// module.exports = function(app) {
+module.exports = function(app) {
 
     // GET route for displaying all items in Gear (and their associated values)
     app.get("/api/gear", function(req, res) {    
