@@ -2,3 +2,18 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+/* index.handlebars styling */
+.class-for-index {
+  background: url(../img/benjamin-suter-CgoRzWX4CDg-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+}
+
+.index-ahref {
+  color: white;
+  margin: 1rem;
+}
