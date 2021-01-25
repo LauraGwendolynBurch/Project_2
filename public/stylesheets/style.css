@@ -4,6 +4,10 @@ form.login {
 }
 
 /* index.handlebars styling */
+@font-face {
+  font-family: Oswald;
+  src: url("'https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap")
+}
 .class-for-index {
   background: url(../img/benjamin-suter-CgoRzWX4CDg-unsplash.jpg);
   background-repeat: no-repeat;
@@ -12,8 +16,24 @@ form.login {
   height: 100vh;
   color: white;
 }
-
 .index-ahref {
   color: white;
   margin: 1rem;
+  font-size: 0.75rem;
+}
+.btn.btn-round {
+  border-radius: 40px;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  color: #0A6B6D;
+  font-weight: bold;
+}
+.welcome-index {
+  font-size: 8rem;
+  margin-top: 15rem;
+  padding: 1rem;
+  font-family: Oswald;
+  font-weight: 50;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
 }
