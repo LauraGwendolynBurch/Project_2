@@ -3,7 +3,7 @@ form.login {
   margin-top: 50px;
 }
 
-/* index.handlebars styling */
+/* index.handlebars (Landing page) styling */
 @font-face {
   font-family: Oswald;
   src: url("'https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap")
@@ -21,7 +21,7 @@ form.login {
   margin: 1rem;
   font-size: 0.75rem;
 }
-.index-login-btn.btn.btn-round {
+.index-login-btn.btn.btn-round, .login-login-btn.btn.btn-round {
   border-radius: 40px;
   padding-left: 5rem;
   padding-right: 5rem;
@@ -37,3 +37,7 @@ form.login {
   text-transform: uppercase;
   letter-spacing: .5rem;
 }
+/*  */
+
+/* login.handlebars (login in page) */
+
