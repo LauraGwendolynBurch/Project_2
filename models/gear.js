@@ -1,4 +1,4 @@
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   const Gear = sequelize.define("Gear", {
     itemName: {
       type: DataTypes.STRING,
@@ -44,7 +44,7 @@ module.exports = function (sequelize, DataTypes) {
     // Is this where we put in the boolean value? Is it a column...? -Gavin
   });
 
-  Gear.associate = function (models) {
+  Gear.associate = function(models) {
     Gear.belongsTo(models.User, {
       foreignKey: {
         allowNull: false

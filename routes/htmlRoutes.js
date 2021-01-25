@@ -2,7 +2,6 @@
 
 const router = require("express").Router();
 
-
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
@@ -13,7 +12,6 @@ router.get("/", (req, res) => {
   }
   res.render("index");
 });
-
 
 router.get("/login", (req, res) => {
   // If the user already has an account send them to the members page
@@ -38,4 +36,3 @@ router.get("/gear", (req, res) => {
 });
 
 module.exports = router;
-
