@@ -1,3 +1,9 @@
+body {
+  background-image: url(/public/media/pexels-benjamin-suter-3617500.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 form.signup,
 form.login {
   margin-top: 50px;
