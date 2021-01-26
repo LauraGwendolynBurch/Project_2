@@ -1,25 +1,27 @@
-<table >
-    <tr class="tableTitle">
+<table class="table table-hover">
+    {{!-- <tr class="tableTitle">
         <th>
             Gear Inventory List
         </th>
-    </tr>
+    </tr> --}}
 
-    <tr class="dataHeaders">
-        <th class="item">Item</th>
-        <th class="type">Description</th>
-        <th class="type">Wgt.</th>
-        <th class="item">Storage Location</th>
-        <th class="onhand">Qty. On Hand</th>
-        {{!-- <th class="onhand">Qty. Desired</th> --}}
-        <th class="packed">Qty. Packed</th>
-        {{!-- <th class="packed">Qty. Desired</th> --}}
-        {{!-- <th class="total">Total Purchase Require</th> --}}
-        {{!-- <th class="made">Purchase Qty. Made</th> --}}
-    </tr>
+    <thead>
+        <tr class="thead-dark" style="opacity: 0.5;">
+            <th class="item">Item</th>
+            <th class="type">Description</th>
+            <th class="type">Wgt.</th>
+            <th class="item">Storage Location</th>
+            <th class="onhand">Qty. On Hand</th>
+            {{!-- <th class="onhand">Qty. Desired</th> --}}
+            <th class="packed">Qty. Packed</th>
+            {{!-- <th class="packed">Qty. Desired</th> --}}
+            {{!-- <th class="total">Total Purchase Require</th> --}}
+            {{!-- <th class="made">Purchase Qty. Made</th> --}}
+        </tr>
+    </thead>
 
     {{#each items}}
-    <tr class="item1">
+    <tr class="table table-striped">
         <td></td>
         <td></td>
         <td></td>
