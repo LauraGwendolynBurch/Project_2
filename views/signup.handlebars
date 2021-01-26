@@ -1,9 +1,9 @@
-<div class="login mt-5 pt-5">
+ <div class="login mt-5 pt-5">
     <div class="container mt-5">
         <div id="login-row" class="row justify-content-center align-items-center">
             <div id="login-column" class="col-md-6">
                 <div id="login-box" class="col-md-12">
-                    <form id="login-form" class="form" action="" method="post">
+                    <form id="signup" class="form" action="" method="post">
                         <h3 class="text-center m-3">Sign Up Form</h3>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label><br>
@@ -21,7 +21,7 @@
                             <button type="submit" class="login-login-btn btn btn-light btn-sm btn-round m-3">Sign Up</button>
                         </div>
                             <div id="register-link">
-                                <p>Or log in <a href="/signup">here</a></p>
+                                <p>Or log in <a href="/login">here</a></p>
                                 <p><a href="/">Home</a></p>
                             </div>
                         </form>
@@ -29,9 +29,9 @@
                 </div>
             </div>
         </div>
-    </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="/public/js/signup.js"></script>
+    </div> 
+    {{#section 'scripts'}}
+    <script type="text/javascript" src="js/signup.js"></script>
+    {{/section}}
 
 
