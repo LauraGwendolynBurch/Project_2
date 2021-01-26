@@ -2,9 +2,12 @@
 require("dotenv").config();
 const express = require("express");
 const session = require("express-session");
+const exphbs = require("express-handlebars");
+const exphbsSections = require("express-handlebars-sections");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
 const path = require("path");
+
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
@@ -22,16 +25,13 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-const exphbs = require("express-handlebars");
-
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+const hbs = exphbs.create({ defaultLayout: "main" });
+exphbsSections(hbs);
+app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
-// const userRoutes = require("./routes/userRoutes");
-const htmlRoutes = require("./routes/htmlRoutes");
-// const gearRoutes = require("./routes/gearRoutes");
-
-app.use(htmlRoutes);
+app.use(require("./routes/htmlRoutes.js"));
+app.use(require("./routes/userRoutes.js"));
 
 // Syncing our database and logging a message to the user upon success, add {force: true} to reset
 db.sequelize.sync({ force: true }).then(() => {
