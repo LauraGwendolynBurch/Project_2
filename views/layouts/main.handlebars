@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		
+		{{!-- Frameworks Styles --}}
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		{{!-- Project Styles --}}
+		<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
+		<link rel="stylesheet" href="/stylesheets/inventory.css" type="text/css" />
+		{{!-- Favicons' styles --}}
+		<link rel="" type="image/png" href="Assets/Media/icons/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/media/mtRainier_favicon_io/favicon.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="/media/mtRainier_favicon_io/android-chrome-192x192.png">
+		<link rel="shortcut icon" type="image/png" sizes="180x180" href="/media/mtRainier_favicon_io/android-chrome-512x512.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/media/mtRainier_favicon_io/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/media/mtRainier_favicon_io/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/media/mtRainier_favicon_io/favicon-32x32.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/media/mtRainier_favicon_io/site.webmanifest">
 
-<head>
-	<meta charset="UTF-8">
-	
-	{{!-- Frameworks Styles --}}
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	{{!-- Project Styles --}}
-	<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
-	<link rel="stylesheet" href="/stylesheets/inventory.css" type="text/css" />
-	{{!-- Favicons' styles --}}
-	<link rel="" type="image/png" href="Assets/Media/icons/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/media/mtRainier_favicon_io/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="/media/mtRainier_favicon_io/android-chrome-192x192.png">
-	<link rel="shortcut icon" type="image/png" sizes="180x180" href="/media/mtRainier_favicon_io/android-chrome-512x512.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/media/mtRainier_favicon_io/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/media/mtRainier_favicon_io/favicon-16x16.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/media/mtRainier_favicon_io/favicon-32x32.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/media/mtRainier_favicon_io/site.webmanifest">
-	
-	<title>Meili</title>
-</head>
+		<title>Meili</title>
+	</head>
 
-<body>
-	{{{ body }}}
-	
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<script src="/js/gear.js"></script>
-	<script src="/js/login.js"></script>
-	<script src="/js/members.js"></script>
-	<script src="/js/signup.js"></script>
-</body>
-	
-
+	<body>
+		{{{ body }}}
+		
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		{{{_sections.scripts}}}
+		<script src="/js/gear.js"></script>
+		<script src="/js/login.js"></script>
+		<script src="/js/members.js"></script>
+		<script src="/js/signup.js"></script>
+	</body>
 </html>

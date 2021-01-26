@@ -7,9 +7,7 @@ const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 router.get("/", (req, res) => {
   // If the user already has an account send them to the members page
-  if (req.user) {
-    res.redirect("/members");
-  }
+
   res.render("index");
 });
 
