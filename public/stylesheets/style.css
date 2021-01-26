@@ -3,8 +3,8 @@ form.login {
   margin-top: 50px;
 }
 /*  
-*
-*
+/*  
+*/
 /* index.handlebars (Landing page) styling */
 @font-face {
   font-family: Oswald;
@@ -39,10 +39,8 @@ form.login {
   text-transform: uppercase;
   letter-spacing: .5rem;
 }
-/*  
-* 
-*
-*
+ /*  
+*/
 /* signup.handlebars (sign up page) */
 .class-signup {
   background-color: #013042;
@@ -83,7 +81,4 @@ p.account {
 /*input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.658) !important;
   } */
-/* 
-*
-*
-*
+
