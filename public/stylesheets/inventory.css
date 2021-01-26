@@ -1,3 +1,10 @@
+body {
+    background: url(/public/media/inventorybg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .tableHeader {
     text-align: center;
     align-items: center;
