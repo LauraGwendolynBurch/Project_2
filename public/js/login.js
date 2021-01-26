@@ -22,14 +22,14 @@ $(document).ready(() => {
     passwordInput.val("");
   });
 
-  // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
+  // loginUser does a post to our "api/login" route and if successful, redirects us the the gear page
   function loginUser(email, password) {
     $.post("/api/login", {
       email: email,
       password: password
     })
       .then(() => {
-        window.location.replace("/members");
+        window.location.replace("/gear");
         // If there's an error, log the error
       })
       .catch(err => {
