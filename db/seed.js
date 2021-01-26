@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 console.log("Running the seed function...");
 
 require("dotenv").config();
