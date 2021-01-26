@@ -19,7 +19,7 @@ router.get("/api/gear", (req, res) => {
   // Set the value to an array of the models we want to include in a left outer join
 });
 
-// GET route for filtering for packing list items (entire row), in other words if the itemQuantityInPackingList value is greater than zero ---??????????????????
+// GET route for filtering for packing list items (entire row), in other words if the itemQuantityInPackingList value is greater than zero
 router.get("/api/gear/packed", (req, res) => {
   const query = {};
   if (req.query.user_id) {
@@ -59,6 +59,7 @@ router.delete("/api/gear/:id", (req, res) => {
 });
 
 // Update route for editing item values in the Gear
+router.put("/api/gear", (req, res) => {
   db.Gear.update(req.body, {
     where: {
       id: req.body.id
