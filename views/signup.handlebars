@@ -4,15 +4,11 @@
         <div id="login-row" class="row justify-content-center align-items-center">
             <div id="login-column" class="col-md-6">
                 <div id="login-box" class="col-md-12">
-                    <form id="login-form" class="form" action="" method="post">
+                    <form id="signup" class="form" action="" method="post">
                         <div class="imgcontainer text-center"> 
                             <i class="fa fa-user-circle"></i>
                         </div>
                         <h3 class="text-center mt-3 my-0">Sign Up</h3>
-                        <div class="form-group">
-                            <label for="exampleInputName" class="signup-input-name"></label><br>
-                            <input type="name" class="form-control" id="signup-name-input" placeholder="User Name">
-                        </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1" class="signup-input-email"></label><br>
                             <input type="email" class="form-control" id="signup-email-input" placeholder="Email address">
@@ -26,7 +22,7 @@
                           <span class="sr-only">Error:</span> <span class="msg"></span>
                         </div>
                         <div class="form-group text-center">
-                            <button type="submit" class="signup-save-btn btn btn-sm btn-round mt-4 shadow">Save</button>
+                            <button type="submit" class="signup-save-btn btn btn-sm btn-round mt-4 shadow">Sign up</button>
                         </div>
                             <div id="register-link" class="text-center">
                                 <p class="account">already have an account?</p>
@@ -38,10 +34,9 @@
                 </div>
             </div>
         </div>
-    </div>
-    </body>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="/public/js/signup.js"></script>
+    </div> 
+    {{#section 'scripts'}}
+    <script type="text/javascript" src="js/signup.js"></script>
+    {{/section}}
 
 
