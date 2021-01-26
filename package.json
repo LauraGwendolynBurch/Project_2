@@ -1,14 +1,15 @@
 {
   "name": "1-Passport-Example",
   "version": "1.0.0",
-  "description": "",
+  "description": "![License Icon](https://img.shields.io/badge/license-GPL3.0-informational.svg)",
   "main": "server.js",
   "scripts": {
     "test": "npm run lint",
     "start": "node server.js",
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
-    "watch": "nodemon server.js"
+    "watch": "nodemon server.js",
+    "seed": "node ./db/seed.js"
   },
   "keywords": [],
   "author": "",
@@ -29,9 +30,17 @@
     "chai-http": "^4.0.0",
     "cross-env": "^5.2.0",
     "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-prettier": "^2.10.0",
     "eslint-plugin-prettier": "^2.6.2",
     "mocha": "^5.2.0",
     "prettier": "^1.13.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LauraGwendolynBurch/Project_2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LauraGwendolynBurch/Project_2/issues"
+  },
+  "homepage": "https://github.com/LauraGwendolynBurch/Project_2#readme"
 }
