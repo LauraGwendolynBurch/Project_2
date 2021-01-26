@@ -21,7 +21,7 @@ form.login {
   margin: 1rem;
   font-size: 0.75rem;
 }
-.index-login-btn.btn.btn-round, .login-login-btn.btn.btn-round {
+.index-login-btn.btn.btn-round {
   border-radius: 40px;
   padding-left: 5rem;
   padding-right: 5rem;
@@ -39,5 +39,38 @@ form.login {
 }
 /*  */
 
-/* login.handlebars (login in page) */
+/* signup.handlebars (sign up page) */
+.class-signup {
+  background-color: #013042;
+  color: rgba(255, 255, 255, 0.836);
+}
 
+.signup-save-btn.btn.btn-round {
+  border-radius: 40px;
+  padding: 0.7rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  color: white;
+  background: #1DB49B;
+
+}
+
+.fa.fa-user-circle {
+  color: #0A6B6D;
+  font-size: 8rem;
+}
+
+.signup-login-btn.btn.btn-round {
+  border-radius: 40px;
+  padding: 0.7rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  color: white;
+  border-color: #1DB49B;
+}
+p.account {
+  font-size: 10px;
+  margin: 0.25rem;
+}
+
+/*  */
