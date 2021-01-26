@@ -1,7 +1,7 @@
 // Requiring path to so we can use relative routes to our HTML files
 
 const router = require("express").Router();
-
+const db = require("../models");
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
@@ -39,7 +39,14 @@ router.get("/gear", (req, res) => {
   if (req.user) {
     res.redirect("/members");
   }
-  res.render("gear");
+  db.Gear.findAll({
+    where: {
+      UserId: 1
+    }
+  }).then(dbUser => {
+    // res.json(dbUser);
+    res.render("gear")
+  });
 });
 
 module.exports = router;
