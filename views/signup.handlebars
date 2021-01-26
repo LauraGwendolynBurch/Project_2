@@ -1,28 +1,37 @@
-<div class="login mt-5 pt-5">
+<body class="class-signup">
+<div class="pt-3">
     <div class="container mt-5">
         <div id="login-row" class="row justify-content-center align-items-center">
             <div id="login-column" class="col-md-6">
                 <div id="login-box" class="col-md-12">
                     <form id="login-form" class="form" action="" method="post">
-                        <h3 class="text-center m-3">Sign Up Form</h3>
+                        <div class="imgcontainer text-center"> 
+                            <i class="fa fa-user-circle"></i>
+                        </div>
+                        <h3 class="text-center m-3">Sign Up</h3>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label><br>
-                            <input type="email" class="form-control" id="email-input" placeholder="Email">
+                            <label for="exampleInputName" class="signup-input-name"></label><br>
+                            <input type="name" class="form-control" id="signup-name-input" placeholder="User Name">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label><br>
-                            <input type="password" class="form-control" id="password-input" placeholder="Password">
+                            <label for="exampleInputEmail1" class="signup-input-email"></label><br>
+                            <input type="email" class="form-control" id="signup-email-input" placeholder="Email address">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1"></label><br>
+                            <input type="password" class="form-control" id="signup-password-input" placeholder="Password">
                         </div>
                         <div style="display: none" id="alert" class="alert alert-danger" role="alert">
                           <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                           <span class="sr-only">Error:</span> <span class="msg"></span>
                         </div>
                         <div class="form-group text-center">
-                            <button type="submit" class="login-login-btn btn btn-light btn-sm btn-round m-3">Sign Up</button>
+                            <button type="submit" class="signup-save-btn btn btn-sm btn-round mt-4 shadow">Save</button>
                         </div>
-                            <div id="register-link">
-                                <p>Or log in <a href="/signup">here</a></p>
-                                <p><a href="/">Home</a></p>
+                            <div id="register-link" class="text-center">
+                                <p class="account">already have an account?</p>
+                                <a href="/login" type="button" class="signup-login-btn btn btn-sm btn-round">Log in</button></a>
+                                {{!-- <p><a href="/">Home</a></p> --}}
                             </div>
                         </form>
                     </div>
@@ -30,6 +39,7 @@
             </div>
         </div>
     </div>
+    </body>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="/public/js/signup.js"></script>
