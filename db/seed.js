@@ -10,13 +10,13 @@ const Gear = require("../models").Gear;
 const userSeeds = [
   {
     id: 1,
-    name: "Bob",
+    // name: "Bob",
     email: "bob@gmail.com",
     password: "password"
   },
   {
     id: 2,
-    name: "John",
+    // name: "John",
     email: "john@gmail.com",
     password: "password"
   }
@@ -58,11 +58,11 @@ const seed = () => {
     result => {
       return Gear.bulkCreate(gearSeeds).then(
         result => {
-          console.log("We created the gears!");
+          console.log("We created the gear!");
           console.log(result);
         },
         error => {
-          console.log("Error creating gears");
+          console.log("Error creating gear");
           console.log(error);
         }
       );
@@ -74,7 +74,7 @@ const seed = () => {
   );
 };
 
-console.log("Runnign seed");
+console.log("Creating seeds...");
 
 dropEverything().then(result => {
   seed().then(result => {
