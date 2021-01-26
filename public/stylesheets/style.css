@@ -2,7 +2,9 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
-
+/*  
+*
+*
 /* index.handlebars (Landing page) styling */
 @font-face {
   font-family: Oswald;
@@ -37,14 +39,15 @@ form.login {
   text-transform: uppercase;
   letter-spacing: .5rem;
 }
-/*  */
-
+/*  
+* 
+*
+*
 /* signup.handlebars (sign up page) */
 .class-signup {
   background-color: #013042;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.897);
 }
-
 .signup-save-btn.btn.btn-round {
   border-radius: 40px;
   padding: 0.7rem;
@@ -54,12 +57,10 @@ form.login {
   background: linear-gradient(#1DB49B, #167B6B);
 
 }
-
 .fa.fa-user-circle {
   color: #0A6B6D;
   font-size: 8rem;
 }
-
 .signup-login-btn.btn.btn-round {
   border-radius: 40px;
   padding: 0.7rem;
@@ -79,10 +80,10 @@ p.account {
   background-color: transparent;
   color: white;
 }
-
 /*input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.658) !important;
   } */
-
-
-/*  */
+/* 
+*
+*
+*
