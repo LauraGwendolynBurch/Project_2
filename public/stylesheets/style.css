@@ -42,7 +42,7 @@ form.login {
 /* signup.handlebars (sign up page) */
 .class-signup {
   background-color: #013042;
-  color: rgba(255, 255, 255, 0.836);
+  color: rgb(255, 255, 255);
 }
 
 .signup-save-btn.btn.btn-round {
@@ -51,7 +51,7 @@ form.login {
   padding-left: 5rem;
   padding-right: 5rem;
   color: white;
-  background: #1DB49B;
+  background: linear-gradient(#1DB49B, #167B6B);
 
 }
 
@@ -72,5 +72,17 @@ p.account {
   font-size: 10px;
   margin: 0.25rem;
 }
+#signup-email-input, #signup-password-input, #signup-name-input{
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #1DB49B;
+  background-color: transparent;
+  color: white;
+}
+
+/*input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.658) !important;
+  } */
+
 
 /*  */
