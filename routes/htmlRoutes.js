@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
 router.get("/login", (req, res) => {
   // If the user already has an account send them to the gear page
   if (req.user) {
-    res.redirect("/gear");
+    return res.redirect("/gear");
   }
   res.render("login");
 });
@@ -22,7 +22,7 @@ router.get("/login", (req, res) => {
 router.get("/signup", (req, res) => {
   // If the user already has an account send them to the gear page
   if (req.user) {
-    res.redirect("/gear");
+    return res.redirect("/gear");
   }
   res.render("signup");
 });
