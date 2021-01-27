@@ -3,15 +3,17 @@ const db = require("../models");
 const router = express.Router();
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
+// Needed to for column comparison
+const { Op } = require("sequelize");
 
 // // Gear Routes
 // GET route for displaying all items in Gear (and their associated values)
-router.get("/api/gear/:userId", isAuthenticated, (req, res) => {
+router.get("/api/gear", isAuthenticated, (req, res) => {
   console.log("Entering GET method");
   // Add an "include" property to our options in our displayAllItems query
   db.Gear.findAll({
     where: {
-      id: req.params.userId
+      Userid: req.user.id
     }
   }).then(gear => {
     res.json(gear);
@@ -21,29 +23,33 @@ router.get("/api/gear/:userId", isAuthenticated, (req, res) => {
 
 // GET route for filtering for packing list items (entire row), in other words if the itemQuantityInPackingList value is greater than zero
 router.get("/api/gear/packed", isAuthenticated, (req, res) => {
-  const query = {};
-  if (req.query.user_id) {
-    query.UserId = req.query.user_id;
-  }
+  console.log("Entering GET packed method");
   // Add an "include" property to our options in our displayPackingList query
   db.Gear.findAll({
     where: {
-      query,
-      include: [db.User],
+      UserId: req.user.id,
       itemQuantityInPackingList: {
-        [db.gt]: 0
+        [Op.gt]: 0
       }
     }
-  }).then(Gear => {
-    res.join(Gear);
+  }).then(gear => {
+    res.json(gear);
   });
   // Set the value to an array of the models we want to include in a left outer join
 });
 
 // POST route for adding new item (row) to Gear
 router.post("/api/gear", isAuthenticated, (req, res) => {
-  db.Gear.create(req.body).then(Gear => {
-    res.json(Gear);
+  db.Gear.create({
+    itemName: req.body.itemName,
+    itemDescription: req.body.itemDescription,
+    itemWeight: req.body.itemWeight,
+    itemStorageLocation: req.body.itemStorageLocation,
+    itemQuantityInStorage: req.body.itemQuantityInStorage,
+    itemQuantityInPackingList: req.body.itemQuantityInPackingList,
+    UserId: req.user.id
+  }).then(gear => {
+    res.json(gear);
   });
 });
 
@@ -51,7 +57,8 @@ router.post("/api/gear", isAuthenticated, (req, res) => {
 router.delete("/api/gear/:id", (req, res) => {
   db.Gear.destroy({
     where: {
-      id: req.params.id
+      id: req.params.id,
+      UserId: req.user.id
     }
   }).then(Gear => {
     res.json(Gear);
@@ -59,10 +66,17 @@ router.delete("/api/gear/:id", (req, res) => {
 });
 
 // Update route for editing item values in the Gear
-router.put("/api/gear", isAuthenticated, (req, res) => {
+router.put("/api/gear/:id", isAuthenticated, (req, res) => {
   db.Gear.update(req.body, {
+    itemName: req.body.itemName,
+    itemDescription: req.body.itemDescription,
+    itemWeight: req.body.itemWeight,
+    itemStorageLocation: req.body.itemStorageLocation,
+    itemQuantityInStorage: req.body.itemQuantityInStorage,
+    itemQuantityInPackingList: req.body.itemQuantityInPackingList,
     where: {
-      id: req.body.id
+      id: req.params.id,
+      UserId: req.user.id
     }
   }).then(Gear => {
     res.json(Gear);

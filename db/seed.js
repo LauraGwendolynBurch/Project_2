@@ -27,7 +27,7 @@ const gearSeeds = [
     itemName: "Cammenga Tritium Compass 3H",
     itemDescription: "Day/Night navigation aide",
     itemWeight: 4,
-    itemStorageLocationion: "garage",
+    itemStorageLocation: "garage",
     itemQuantityInStorage: "1",
     itemQuantityInPackingList: "0",
     UserId: 1
@@ -36,7 +36,7 @@ const gearSeeds = [
     itemName: "Cammenga Tritium Compass 3H",
     itemDescription: "Day/Night navigation aide",
     itemWeight: 4,
-    itemStorageLocationion: "garage",
+    itemStorageLocation: "garage",
     itemQuantityInStorage: "1",
     itemQuantityInPackingList: "0",
     UserId: 2
