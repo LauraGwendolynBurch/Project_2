@@ -32,7 +32,7 @@ router.get("/gear", isAuthenticated, (req, res) => {
     where: {
       UserId: 1
     }
-  }).then(dbUser => {
+  }).then(() => {
     // res.json(dbUser);
     res.render("gear");
   });
