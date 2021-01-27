@@ -32,11 +32,9 @@ router.get("/gear", isAuthenticated, (req, res) => {
     where: {
       UserId: 1
     }
-  }).then(gearResults => {
-    const hbsObject = {
-      gearData: gearResults
-    };
-    res.render("gear", hbsObject);
+  }).then(() => {
+    // res.json(dbUser);
+    res.render("gear");
   });
 });
 
