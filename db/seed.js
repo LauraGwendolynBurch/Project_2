@@ -33,10 +33,10 @@ const gearSeeds = [
     UserId: 1
   },
   {
-    itemName: "Cammenga Tritium Compass 3H",
-    itemDescription: "Day/Night navigation aide",
-    itemWeight: 4,
-    itemStorageLocationion: "garage",
+    itemName: "Sleeping bag",
+    itemDescription: "bedding",
+    itemWeight: 10,
+    itemStorageLocationion: "bedroom closet",
     itemQuantityInStorage: "1",
     itemQuantityInPackingList: "0",
     UserId: 2

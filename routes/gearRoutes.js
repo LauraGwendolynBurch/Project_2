@@ -14,6 +14,7 @@ router.get("/api/gear", (req, res) => {
     where: query,
     include: [db.User]
   }).then(dbGear => {
+    console.log(dbGear);
     res.json(dbGear);
   });
   // Set the value to an array of the models we want to include in a left outer join
