@@ -6,10 +6,9 @@ form.login {
 /*  
 */
 /* index.handlebars (Landing page) styling */
-@font-face {
-  font-family: Oswald;
-  src: url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap")
-}
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap"); 
+  
+
 .class-for-index {
   background: url(../img/nathan-dumlao-pLoMDKtl-JY-unsplash\ \(1\).jpg);
   background-repeat: no-repeat;
