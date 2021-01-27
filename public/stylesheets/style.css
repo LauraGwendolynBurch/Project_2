@@ -8,36 +8,39 @@ form.login {
 /* index.handlebars (Landing page) styling */
 @font-face {
   font-family: Oswald;
-  src: url("'https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap")
+  src: url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap")
 }
 .class-for-index {
-  background: url(../img/benjamin-suter-CgoRzWX4CDg-unsplash.jpg);
+  background: url(../img/nathan-dumlao-pLoMDKtl-JY-unsplash\ \(1\).jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
   color: white;
 }
-.index-ahref {
-  color: white;
-  margin: 1rem;
-  font-size: 0.75rem;
-}
 .index-login-btn.btn.btn-round {
-  border-radius: 40px;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  /* border-radius: 40px; */
+  padding-left: 4rem;
+  padding-right: 4rem;
   color: #0A6B6D;
   font-weight: bold;
 }
+.index-ahref.btn {
+  padding-right: 1rem;
+  color: #22d8ba;
+  background-color: transparent;
+  border-color: transparent;
+}
 .welcome-index {
-  font-size: 8rem;
+  font-size: 3.5rem;
   margin-top: 15rem;
-  padding: 1rem;
+  /* padding: 1rem; */
   font-family: Oswald;
   font-weight: 50;
   text-transform: uppercase;
   letter-spacing: .5rem;
+  font-style: italic;
+  text-shadow: 2px 2px #02020252;
 }
  /*  
 */
@@ -81,4 +84,3 @@ p.account {
 /*input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.658) !important;
   } */
-
