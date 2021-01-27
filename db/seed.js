@@ -33,7 +33,6 @@ const gearSeeds = [
     UserId: 1
   },
   {
-<<<<<<< HEAD
     itemName: "Bob's Map",
     itemDescription: "1:20,0000 Lat-Long of Mt. St. Helens",
     itemWeight: 1,
@@ -56,12 +55,6 @@ const gearSeeds = [
     itemDescription: "Cammenga Tritium Compass 3H",
     itemWeight: 4,
     itemStorageLocationion: "garage",
-=======
-    itemName: "Sleeping bag",
-    itemDescription: "bedding",
-    itemWeight: 10,
-    itemStorageLocationion: "bedroom closet",
->>>>>>> 7e023067cffdd4e2a06a10704e3da3d4c5b1170a
     itemQuantityInStorage: "1",
     itemQuantityInPackingList: "0",
     UserId: 2
@@ -76,8 +69,8 @@ const gearSeeds = [
     UserId: 2
   },
   {
-    itemName: "Bob's Backpack",
-    itemDescription: "Mountain Hardwear Grotto 35L",
+    itemName: "John's Backpack",
+    itemDescription: "Camp 4 28 Backpack",
     itemWeight: 42,
     itemStorageLocationion: "garage",
     itemQuantityInStorage: "1",
