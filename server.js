@@ -29,10 +29,10 @@ exphbsSections(hbs);
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
-app.use(require("./routes/htmlRoutes.js"));
-app.use(require("./routes/userRoutes.js"));
-app.use(require("./routes/gearRoutes.js"));
-
+//app.use(require("./routes/htmlRoutes.js"));
+//app.use(require("./routes/userRoutes.js"));
+//app.use(require("./routes/gearRoutes.js"));
+app.use(require("./routes"));
 // Syncing our database and logging a message to the user upon success, add {force: true} to reset
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {

@@ -24,22 +24,55 @@ const userSeeds = [
 
 const gearSeeds = [
   {
-    itemName: "Cammenga Tritium Compass 3H",
-    itemDescription: "Day/Night navigation aide",
+    itemName: "Bob's Compass",
+    itemDescription: "Cammenga Tritium Compass 3H",
     itemWeight: 4,
-    itemStorageLocationion: "garage",
+    itemStorageLocation: "garage",
     itemQuantityInStorage: "1",
     itemQuantityInPackingList: "0",
     UserId: 1
   },
   {
-    itemName: "Cammenga Tritium Compass 3H",
-    itemDescription: "Day/Night navigation aide",
+    itemName: "Bob's Map",
+    itemDescription: "1:20,0000 Lat-Long of Mt. St. Helens",
+    itemWeight: 1,
+    itemStorageLocation: "garage",
+    itemQuantityInStorage: "1",
+    itemQuantityInPackingList: "0",
+    UserId: 1
+  },
+  {
+    itemName: "Bob's Backpack",
+    itemDescription: "Mountain Hardwear Grotto 35L",
+    itemWeight: 42,
+    itemStorageLocation: "garage",
+    itemQuantityInStorage: "1",
+    itemQuantityInPackingList: "0",
+    UserId: 1
+  },
+  {
+    itemName: "John's Compass",
+    itemDescription: "Cammenga Tritium Compass 3H",
     itemWeight: 4,
-    itemStorageLocationion: "garage",
+    itemStorageLocation: "garage",
     itemQuantityInStorage: "1",
     itemQuantityInPackingList: "0",
     UserId: 2
+  },
+  {
+    itemName: "John's Map",
+    itemDescription: "1:50,000 MGRS WGS84 of Mt. Rainier",
+    itemWeight: 1,
+    itemStorageLocation: "garage",
+    itemQuantityInStorage: "1",
+    itemQuantityInPackingList: "0",
+    UserId: 2
+  },
+  {
+    itemName: "John's Backpack",
+    itemDescription: "Camp 4 28 Backpack",
+    itemWeight: 42,
+    itemStorageLocation: "garage"
   }
 ];
 
