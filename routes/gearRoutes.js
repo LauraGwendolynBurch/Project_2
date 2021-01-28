@@ -15,9 +15,13 @@ router.get("/api/gear", isAuthenticated, (req, res) => {
     where: {
       Userid: req.user.id
     }
-  }).then(gear => {
-    res.json(gear);
-  });
+  })
+    .then(gear => {
+      res.json(gear);
+    })
+    .catch(() => {
+      return res.status(400).json({ message: "error connecting to server" });
+    });
   // Set the value to an array of the models we want to include in a left outer join
 });
 
@@ -32,9 +36,13 @@ router.get("/api/gear/packed", isAuthenticated, (req, res) => {
         [Op.gt]: 0
       }
     }
-  }).then(gear => {
-    res.json(gear);
-  });
+  })
+    .then(gear => {
+      res.json(gear);
+    })
+    .catch(() => {
+      return res.status(400).json({ message: "error connecting to server" });
+    });
   // Set the value to an array of the models we want to include in a left outer join
 });
 
@@ -48,9 +56,13 @@ router.post("/api/gear", isAuthenticated, (req, res) => {
     itemQuantityInStorage: req.body.itemQuantityInStorage,
     itemQuantityInPackingList: req.body.itemQuantityInPackingList,
     UserId: req.user.id
-  }).then(gear => {
-    res.json(gear);
-  });
+  })
+    .then(gear => {
+      res.json(gear);
+    })
+    .catch(() => {
+      return res.status(400).json({ message: "error - missing field" });
+    });
 });
 
 // DELETE route for deleting items (entire row) from Gear
@@ -60,9 +72,13 @@ router.delete("/api/gear/:id", (req, res) => {
       id: req.params.id,
       UserId: req.user.id
     }
-  }).then(Gear => {
-    res.json(Gear);
-  });
+  })
+    .then(Gear => {
+      res.json(Gear);
+    })
+    .catch(() => {
+      return res.status(400).json({ message: "error connecting to server" });
+    });
 });
 
 // Update route for editing item values in the Gear
@@ -78,9 +94,13 @@ router.put("/api/gear/:id", isAuthenticated, (req, res) => {
       id: req.params.id,
       UserId: req.user.id
     }
-  }).then(Gear => {
-    res.json(Gear);
-  });
+  })
+    .then(Gear => {
+      res.json(Gear);
+    })
+    .catch(() => {
+      return res.status(400).json({ message: "error - missing field" });
+    });
 });
 
 module.exports = router;
