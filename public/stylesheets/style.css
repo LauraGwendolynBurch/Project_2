@@ -34,7 +34,7 @@ form.login {
   font-size: 3.5rem;
   margin-top: 15rem;
   /* padding: 1rem; */
-  font-family: Oswald;
+  font-family: 'Oswald', sans-serif;
   font-weight: 50;
   text-transform: uppercase;
   letter-spacing: .5rem;
