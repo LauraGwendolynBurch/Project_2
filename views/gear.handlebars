@@ -14,10 +14,10 @@
         <h2>Welcome <span class="member-name"></span></h2>
       </div>
     </div>
-  </div>
+  </div> --}}
 
 
-  {{!-- <table class="table table-hover">
+  <table class="table table-hover">
     <tr class="tableTitle">
       <thead>
         <tr class="thead-dark" style="opacity: 0.5;">
@@ -32,19 +32,48 @@
           <th class="total">Total Purchase Require</th>
           <th class="made">Purchase Qty. Made</th>
         </tr>
-      </thead> --}}
+      </thead>
 
       <h2>Gear Inventory List</h2>
       <ul>
         {{#each gearData}}
         <li>
           {{dataValues.itemName}}
-          <button data-id={{id}} class="edit-item"type="submit" data-order="true">Edit</button>
+          <button data-id={{id}} class="edit-item" type="submit" data-order="true">Edit</button>
         </li>
         {{/each}}
       </ul>
-  {{!-- </table> --}}
+  </table>
 
+  <form id="createForm">
+    <p>Add a new item to your inventory</p>
+    <div></div>
+    <div class="form-group">
+      <label for="itemName">Item Name</label>
+      <input type="text" class="form-control" id="itemName" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="itemDescription">itemDescription</label>
+      <input type="text" class="form-control" id="itemDescription" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="itemWeight">itemWeight</label>
+      <input type="text" class="form-control" id="itemWeight" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="itemStorageLocation">itemStorageLocation</label>
+      <input type="text" class="form-control" id="itemStorageLocation" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="itemQuantityInStorage">itemQuantityInStorage</label>
+      <input type="text" class="form-control" id="itemQuantityInStorage" placeholder="">
+    </div>
+    <div class="form-group">
+      <label for="itemQuantityInPackingList">itemQuantityInPackingList</label>
+      <input type="text" class="form-control" id="itemQuantityInPackingList" placeholder="">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 
   {{#section 'scripts'}}
   <script type="text/javascript" src="js/gear.js"></script>
