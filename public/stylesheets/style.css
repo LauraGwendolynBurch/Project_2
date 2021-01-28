@@ -6,53 +6,58 @@ form.login {
 /*  
 */
 /* index.handlebars (Landing page) styling */
-@font-face {
-  font-family: Oswald;
-  src: url("'https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap")
-}
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap"); 
+  
+
 .class-for-index {
-  background: url(../img/benjamin-suter-CgoRzWX4CDg-unsplash.jpg);
+  background: url(../img/nathan-dumlao-pLoMDKtl-JY-unsplash\ \(1\).jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
   color: white;
 }
-.index-ahref {
-  color: white;
-  margin: 1rem;
-  font-size: 0.75rem;
-}
-.index-login-btn.btn.btn-round {
-  border-radius: 40px;
+.index-login-btn.btn.btn-round, .login-login-btn {
+  padding: 0.7rem;
   padding-left: 5rem;
   padding-right: 5rem;
   color: #0A6B6D;
   font-weight: bold;
 }
+.index-ahref.btn {
+  padding-right: 1rem;
+  color: #22d8ba;
+  background-color: transparent;
+  border-color: transparent;
+}
 .welcome-index {
-  font-size: 8rem;
+  font-size: 3.5rem;
   margin-top: 15rem;
-  padding: 1rem;
+  /* padding: 1rem; */
   font-family: Oswald;
   font-weight: 50;
   text-transform: uppercase;
   letter-spacing: .5rem;
+  font-style: italic;
+  text-shadow: 2px 2px #02020252;
+}
+.index-sub {
+  text-shadow: 2px 2px #02020252;
 }
  /*  
 */
 /* signup.handlebars (sign up page) */
 .class-signup {
-  background-color: #013042;
+  background: linear-gradient(to bottom right,#013042, #167B6B);
+  height: 100vh;
   color: rgba(255, 255, 255, 0.897);
 }
 .signup-save-btn.btn.btn-round {
-  border-radius: 40px;
   padding: 0.7rem;
   padding-left: 5rem;
   padding-right: 5rem;
   color: white;
-  background: linear-gradient(#1DB49B, #167B6B);
+  background-color: #1DB49B;
 
 }
 .fa.fa-user-circle {
@@ -60,7 +65,6 @@ form.login {
   font-size: 8rem;
 }
 .signup-login-btn.btn.btn-round {
-  border-radius: 40px;
   padding: 0.7rem;
   padding-left: 5rem;
   padding-right: 5rem;
@@ -71,14 +75,33 @@ p.account {
   font-size: 10px;
   margin: 0.25rem;
 }
-#signup-email-input, #signup-password-input, #signup-name-input{
-  border-radius: 0;
-  border: none;
-  border-bottom: 1px solid #1DB49B;
-  background-color: transparent;
+.signup-colomn {
+  background-color: #013042d0;
+}
+/* #signup-email-input, #signup-password-input, #signup-name-input{
+  
+} */
+/*
+*/
+.login {
+  background-image:url(../img/nathan-dumlao-pLoMDKtl-JY-unsplash\ \(1\).jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   color: white;
 }
-/*input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.658) !important;
-  } */
+.login-page-cont {
+  background-color: rgba(155, 153, 153, 0.144);
+  backdrop-filter: blur(2px);
 
+}
+.login-input-email, .login-input-pass {
+  background-color: rgba(255, 255, 255, 0.363);
+}
+a.signup-link {
+  color: #1DB49B;
+}
+p.signup-link {
+  margin-top: 3rem;
+}
