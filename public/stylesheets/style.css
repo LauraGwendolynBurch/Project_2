@@ -6,9 +6,7 @@ form.login {
 /*  
 */
 /* index.handlebars (Landing page) styling */
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap"); 
-  
-
+/* @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");  */
 .class-for-index {
   background: url(../img/nathan-dumlao-pLoMDKtl-JY-unsplash\ \(1\).jpg);
   background-repeat: no-repeat;
@@ -29,17 +27,20 @@ form.login {
   color: #22d8ba;
   background-color: transparent;
   border-color: transparent;
+  font-weight: bold;
 }
 .welcome-index {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-top: 15rem;
   /* padding: 1rem; */
-  font-family: Oswald;
+  font-family: ''Arial'', 'Helvetica', 'sans-serif';
   font-weight: 50;
   text-transform: uppercase;
-  letter-spacing: .5rem;
+  letter-spacing: .2rem;
   font-style: italic;
   text-shadow: 2px 2px #02020252;
+  font-weight: bold;
+
 }
 .index-sub {
   text-shadow: 2px 2px #02020252;
@@ -74,6 +75,7 @@ form.login {
 p.account {
   font-size: 10px;
   margin: 0.25rem;
+  text-shadow: 2px 2px #02020252;
 }
 .signup-colomn {
   background-color: #013042d0;
@@ -83,8 +85,8 @@ p.account {
 } */
 /*
 */
-.login {
-  background-image:url(../img/nathan-dumlao-pLoMDKtl-JY-unsplash\ \(1\).jpg);
+.login-back-img{
+  background: url(../img/nathan-dumlao-pLoMDKtl-JY-unsplash\ \(1\).jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -99,8 +101,9 @@ p.account {
 .login-input-email, .login-input-pass {
   background-color: rgba(255, 255, 255, 0.363);
 }
-a.signup-link {
+a.signup-link, .home-link {
   color: #1DB49B;
+  
 }
 p.signup-link {
   margin-top: 3rem;
