@@ -83,8 +83,8 @@ p.account {
 } */
 /*
 */
-.login {
-  background-image:url(../img/nathan-dumlao-pLoMDKtl-JY-unsplash\ \(1\).jpg);
+.login-back-img{
+  background: url(../img/nathan-dumlao-pLoMDKtl-JY-unsplash\ \(1\).jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
