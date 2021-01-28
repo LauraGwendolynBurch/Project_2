@@ -12,13 +12,13 @@ const userSeeds = [
     id: 1,
     // name: "Bob",
     email: "bob@gmail.com",
-    password: "password"
+    password: "$2a$10$WttW6zQLdoUe8leQ5C.lgeBBw5CFUHjOvA9bXGB5tVQdaYFgw3qoG"
   },
   {
     id: 2,
     // name: "John",
     email: "john@gmail.com",
-    password: "password"
+    password: "$2a$10$WttW6zQLdoUe8leQ5C.lgeBBw5CFUHjOvA9bXGB5tVQdaYFgw3qoG"
   }
 ];
 
@@ -72,7 +72,10 @@ const gearSeeds = [
     itemName: "John's Backpack",
     itemDescription: "Camp 4 28 Backpack",
     itemWeight: 42,
-    itemStorageLocation: "garage"
+    itemStorageLocation: "garage",
+    itemQuantityInStorage: "1",
+    itemQuantityInPackingList: "0",
+    UserId: 2
   }
 ];
 

@@ -1,17 +1,17 @@
-<div class="login mt-5 pt-5">
-    <div class="container mt-5">
+<div class="login pt-5">
+    <div class="login-container mt-5">
         <div id="login-row" class="row justify-content-center align-items-center">
-            <div id="login-column" class="col-md-6">
-                <div id="login-box" class="col-md-12">
+            <div id="login-column" class="login-page-cont col-md-4 rounded shadow">
+                <div id="login-box" class="col-md-12 mt-5 ">
                     <form id="login" class="form" action="" method="post">
-                        <h3 class="text-center">Login</h3>
+                        <h3 class="text-center">User Login</h3>
                         <div class="form-group">
                             <label for="exampleInputEmail1"></label><br>
-                            <input type="email" class="form-control" id="email-input" placeholder="Email">
+                            <input type="email" class="form-control login-input-email" id="email-input" placeholder="Email">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1" class="text-info"></label><br>
-                            <input type="password" class="form-control" id="password-input" placeholder="Password">
+                            <input type="password" class="form-control login-input-pass" id="password-input" placeholder="Password">
                         </div>
                         <div class="form-group">
                             <label for="remember-me"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
@@ -20,7 +20,7 @@
                             </div>
                         </div>
                             <div id="register-link">
-                                <p>Or sign up <a href="/signup">here</a></p>
+                                <p class="signup-link">Don't have an account? <a href="/signup" class="signup-link">Sign up</a></p>
                                 <p><a href="/">Home</a></p>
                             </div>
                         </form>

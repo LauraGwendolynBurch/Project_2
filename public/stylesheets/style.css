@@ -6,10 +6,9 @@ form.login {
 /*  
 */
 /* index.handlebars (Landing page) styling */
-@font-face {
-  font-family: Oswald;
-  src: url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap")
-}
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap"); 
+  
+
 .class-for-index {
   background: url(../img/nathan-dumlao-pLoMDKtl-JY-unsplash\ \(1\).jpg);
   background-repeat: no-repeat;
@@ -18,10 +17,10 @@ form.login {
   height: 100vh;
   color: white;
 }
-.index-login-btn.btn.btn-round {
-  /* border-radius: 40px; */
-  padding-left: 4rem;
-  padding-right: 4rem;
+.index-login-btn.btn.btn-round, .login-login-btn {
+  padding: 0.7rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   color: #0A6B6D;
   font-weight: bold;
 }
@@ -42,20 +41,23 @@ form.login {
   font-style: italic;
   text-shadow: 2px 2px #02020252;
 }
+.index-sub {
+  text-shadow: 2px 2px #02020252;
+}
  /*  
 */
 /* signup.handlebars (sign up page) */
 .class-signup {
-  background-color: #013042;
+  background: linear-gradient(to bottom right,#013042, #167B6B);
+  height: 100vh;
   color: rgba(255, 255, 255, 0.897);
 }
 .signup-save-btn.btn.btn-round {
-  border-radius: 40px;
   padding: 0.7rem;
   padding-left: 5rem;
   padding-right: 5rem;
   color: white;
-  background: linear-gradient(#1DB49B, #167B6B);
+  background-color: #1DB49B;
 
 }
 .fa.fa-user-circle {
@@ -63,7 +65,6 @@ form.login {
   font-size: 8rem;
 }
 .signup-login-btn.btn.btn-round {
-  border-radius: 40px;
   padding: 0.7rem;
   padding-left: 5rem;
   padding-right: 5rem;
@@ -74,13 +75,33 @@ p.account {
   font-size: 10px;
   margin: 0.25rem;
 }
-#signup-email-input, #signup-password-input, #signup-name-input{
-  border-radius: 0;
-  border: none;
-  border-bottom: 1px solid #1DB49B;
-  background-color: transparent;
+.signup-colomn {
+  background-color: #013042d0;
+}
+/* #signup-email-input, #signup-password-input, #signup-name-input{
+  
+} */
+/*
+*/
+.login {
+  background-image:url(../img/nathan-dumlao-pLoMDKtl-JY-unsplash\ \(1\).jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   color: white;
 }
-/*input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.658) !important;
-  } */
+.login-page-cont {
+  background-color: rgba(155, 153, 153, 0.144);
+  backdrop-filter: blur(2px);
+
+}
+.login-input-email, .login-input-pass {
+  background-color: rgba(255, 255, 255, 0.363);
+}
+a.signup-link {
+  color: #1DB49B;
+}
+p.signup-link {
+  margin-top: 3rem;
+}
