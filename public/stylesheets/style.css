@@ -3,10 +3,8 @@ form.login {
   margin-top: 50px;
 }
 /*  
-/*  
-*/
+
 /* index.handlebars (Landing page) styling */
-/* @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");  */
 body {
   background: url(../img/nathan-dumlao-pLoMDKtl-JY-unsplash\ \(1\).jpg);
   background-repeat: no-repeat;
@@ -32,7 +30,6 @@ body {
 .welcome-index {
   font-size: 3rem;
   margin-top: 15rem;
-  /* padding: 1rem; */
   font-family: ''Arial'', 'Helvetica', 'sans-serif';
   font-weight: 50;
   text-transform: uppercase;
@@ -45,14 +42,10 @@ body {
 .index-sub {
   text-shadow: 2px 2px #02020252;
 }
- /*  
-*/
+/*  
+
+
 /* signup.handlebars (sign up page) */
-/* .class-signup {
-  background: linear-gradient(to bottom right,#013042, #167B6B);
-  height: 100vh;
-  color: rgba(255, 255, 255, 0.897);
-} */
 .signup-save-btn.btn.btn-round {
   padding: 0.7rem;
   padding-left: 5rem;
@@ -80,19 +73,10 @@ p.account {
 .signup-colomn {
   background-color: #013042d0;
 }
-/* #signup-email-input, #signup-password-input, #signup-name-input{
-  
-} */
 /*
-*/
-/* body {
-  background: url(../img/nathan-dumlao-pLoMDKtl-JY-unsplash\ \(1\).jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  color: white;
-} */
+
+
+/* login.handlebars page */
 .login-page-cont {
   background-color: rgba(155, 153, 153, 0.144);
   backdrop-filter: blur(2px);
@@ -108,3 +92,4 @@ a.signup-link, .home-link {
 p.signup-link {
   margin-top: 3rem;
 }
+/*
