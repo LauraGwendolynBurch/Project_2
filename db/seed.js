@@ -12,13 +12,13 @@ const userSeeds = [
     id: 1,
     // name: "Bob",
     email: "bob@gmail.com",
-    password: "password"
+    password: "$2a$10$WttW6zQLdoUe8leQ5C.lgeBBw5CFUHjOvA9bXGB5tVQdaYFgw3qoG"
   },
   {
     id: 2,
     // name: "John",
-    email: "john@gmail.com",
-    password: "password"
+    email: "user@email.com",
+    password: "$2a$10$WttW6zQLdoUe8leQ5C.lgeBBw5CFUHjOvA9bXGB5tVQdaYFgw3qoG"
   }
 ];
 

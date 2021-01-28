@@ -30,9 +30,10 @@ router.get("/signup", (req, res) => {
 router.get("/gear", isAuthenticated, (req, res) => {
   db.Gear.findAll({
     where: {
-      UserId: 1
+      UserId: req.user.id
     }
   }).then(gearResults => {
+    console.log(req.user.id)
     const hbsObject = {
       gearData: gearResults
     };
