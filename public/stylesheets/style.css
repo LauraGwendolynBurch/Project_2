@@ -30,15 +30,17 @@ form.login {
   font-weight: bold;
 }
 .welcome-index {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-top: 15rem;
   /* padding: 1rem; */
-  font-family: 'Oswald', 'sans-serif';
+  font-family: 'Arial', 'Helvetica', 'sans-serif';
   font-weight: 50;
   text-transform: uppercase;
-  letter-spacing: .5rem;
+  letter-spacing: .2rem;
   font-style: italic;
   text-shadow: 2px 2px #02020252;
+  font-weight: lighter;
+
 }
 .index-sub {
   text-shadow: 2px 2px #02020252;
