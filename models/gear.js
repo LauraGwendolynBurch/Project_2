@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
         min: 0
       }
     },
-    itemStorageLocationion: {
+    itemStorageLocation: {
       type: DataTypes.TEXT,
       allowNull: false,
       len: [1]

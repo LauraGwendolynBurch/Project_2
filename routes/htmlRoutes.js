@@ -33,7 +33,7 @@ router.get("/gear", isAuthenticated, (req, res) => {
       UserId: req.user.id
     }
   }).then(gearResults => {
-    console.log(req.user.id)
+    console.log(req.user.id);
     const hbsObject = {
       gearData: gearResults
     };
