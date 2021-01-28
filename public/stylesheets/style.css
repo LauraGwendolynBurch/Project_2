@@ -54,6 +54,9 @@ body {
   background-color: #1DB49B;
 
 }
+.signup-input-email, .signup-input-pass {
+  background-color: rgba(255, 255, 255, 0.363);
+}
 .fa.fa-user-circle {
   color: #0A6B6D;
   font-size: 8rem;
@@ -71,7 +74,7 @@ p.account {
   text-shadow: 2px 2px #02020252;
 }
 .signup-colomn {
-  background-color: #013042d0;
+  background-color: #01304281;
 }
 /*
 
