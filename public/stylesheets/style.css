@@ -11,7 +11,7 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  color: white;
+  /* color: white; */
 }
 .index-login-btn.btn.btn-round, .login-login-btn {
   padding: 0.7rem;
@@ -96,3 +96,5 @@ p.signup-link {
   margin-top: 3rem;
 }
 /*
+/*  */
+
