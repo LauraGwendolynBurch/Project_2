@@ -41,7 +41,6 @@ module.exports = function(sequelize, DataTypes) {
         min: 0
       }
     }
-    // Is this where we put in the boolean value? Is it a column...? -Gavin
   });
 
   Gear.associate = function(models) {
