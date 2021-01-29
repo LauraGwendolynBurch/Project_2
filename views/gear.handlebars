@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -61,3 +62,119 @@
     <script type="text/javascript" src="js/gear.js"></script>
     {{/section}}
 
+=======
+<nav class="navbar navbar-light navbar-expand-lg ">
+      <div class="container">
+      <h2>Welcome <span class="member-name"></span></h2>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav ml-auto">
+            <a class="navbar-brand" href="/logout">Logout</a>
+            </div>
+      </div>
+  </div>
+</nav>
+    
+{{!-- gear items table --}}
+<div class="container ">
+  <div class="row">
+    <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Gear Items Inventory List</h5>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="item">Item</th>
+                    <th class="type">Description</th>
+                    <th class="type">Wgt.</th>
+                    <th class="item">Storage Location</th>
+                    <th class="onhand">Qty. On Hand</th>
+                    <th class="onhand">Qty. Desired</th>
+                    <th class="packed">Qty. Packed</th>
+                    {{!-- <th class="packed">Qty. Desired</th>
+                    <th class="total">Total Purchase Require</th>
+                    <th class="made">Purchase Qty. Made</th> --}}
+
+                    <th>Update</th>  
+                      <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                    {{!-- <th scope="row">1</th> --}}
+                    {{#each gearData}}
+                    <tr>
+                    <td>{{dataValues.itemName}}</td>
+                    <td>{{dataValues.itemDescription}}</td>
+                    <td>{{dataValues.itemWeight}}</td>
+                    <td>{{dataValues.itemStorageLocation}}</td>
+                    <td>{{dataValues.itemQuantityInStorage}}</td>
+                    <td>{{dataValues.itemQuantityInPackingList}}</td>
+                    <td>{{dataValues.UserId}}</td>
+                      <td><a data-id={{id}} class="edit-item" type="submit" data-order="true"><strong>Edit</strong></a></td>
+                      <td><a data-id={{id}} class="delete-item" type="submit" data-order="true"><strong>Delete</strong></a></td>
+                    </tr>
+                    {{/each}}
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{!-- form input area --}}
+<div class="container">
+  <p>Add a new item to your inventory</p>
+  <form class="row g-3">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="itemName">Item Name</label>
+      <input type="text" class="form-control" id="itemName" placeholder="">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="itemDescription">itemDescription</label>
+      <input type="text" class="form-control" id="itemDescription" placeholder="">
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-group">
+      <label for="itemWeight">itemWeight</label>
+      <input type="text" class="form-control" id="itemWeight" placeholder="">
+    </div>
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="itemStorageLocation">itemStorageLocation</label>
+      <input type="text" class="form-control" id="itemStorageLocation" placeholder="">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="itemQuantityInStorage">itemQuantityInStorage</label>
+      <input type="text" class="form-control" id="itemQuantityInStorage" placeholder="">
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="form-group">
+      <label for="itemQuantityInPackingList">itemQuantityInPackingList</label>
+      <input type="text" class="form-control" id="itemQuantityInPackingList" placeholder="">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+</div>
+  {{#section 'scripts'}}
+  <script type="text/javascript" src="js/gear.js"></script>
+  {{/section}}
+>>>>>>> f42f79ef63bc9848210a098d01d01fb79e751a72

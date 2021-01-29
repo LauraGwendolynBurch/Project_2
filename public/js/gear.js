@@ -7,6 +7,7 @@ $(document).ready(() => {
   const itemStorageLocation = $("#itemStorageLocation");
   const itemQuantityInStorage = $("#itemQuantityInStorage");
   const itemQuantityInPackingList = $("#itemQuantityInPackingList");
+<<<<<<< HEAD
 
   $("#createForm").on("submit", postFormSubmit);
 
@@ -17,12 +18,21 @@ $(document).ready(() => {
       return;
     }
 
+=======
+  $("#createForm").on("submit", postFormSubmit);
+  function postFormSubmit(event) {
+    event.preventDefault();
+    if (!itemName.val().trim()) {
+      return;
+    }
+>>>>>>> f42f79ef63bc9848210a098d01d01fb79e751a72
     const data = {
       itemName: itemName.val(),
       itemDescription: itemDescription.val(),
       itemWeight: itemWeight.val(),
       itemStorageLocation: itemStorageLocation.val(),
       itemQuantityInStorage: itemQuantityInStorage.val(),
+<<<<<<< HEAD
       itemQuantityInPackingList: itemQuantityInPackingList.val(),
     };
 
@@ -34,6 +44,15 @@ $(document).ready(() => {
     )
   }
 
+=======
+      itemQuantityInPackingList: itemQuantityInPackingList.val()
+    };
+    $.post("/api/gear", data).then(gear => {
+      location.reload();
+      console.log(gear);
+    });
+  }
+>>>>>>> f42f79ef63bc9848210a098d01d01fb79e751a72
   $.get("/api/user_data").then(data => {
     $(".member-name").text(data.email);
   });
