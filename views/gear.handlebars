@@ -49,8 +49,8 @@
                     <td>{{dataValues.itemQuantityInStorage}}</td>
                     <td>{{dataValues.itemQuantityInPackingList}}</td>
                     <td>{{dataValues.UserId}}</td>
-                      <td><a data-id={{id}} class="edit-item" type="submit" data-order="true"><strong>Edit</strong></a></td>
-                      <td><a data-id={{id}} class="delete-item" type="submit" data-order="true"><strong>Delete</strong></a></td>
+                      <td><button data-id={{id}} type="submit" class="edit-item btn btn-primary" data-order="true">Edit</button></td>
+                      <td><button data-id={{id}} type="submit" class="delete-item btn btn-warning" data-order="true">Delete</button></td>
                     </tr>
                     {{/each}}
                   
