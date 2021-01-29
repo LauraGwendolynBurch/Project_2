@@ -1,12 +1,12 @@
 <nav class="navbar navbar-light navbar-expand-lg ">
       <div class="container">
-      <a class="navbar-brand" href="#">Logo</a>
+      <h2>Welcome <span class="member-name"></span></h2>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <div class="navbar-nav ml-auto">
-            <a class="nav-link" href="#">Logout <span class="sr-only">(current)</span></a>
+            <a class="navbar-brand" href="/logout">Logout</a>
             </div>
       </div>
   </div>
@@ -62,6 +62,53 @@
       </div>
     </div>
   </div>
+{{!-- form input area --}}
+<div class="container">
+  <p>Add a new item to your inventory</p>
+  <form class="row g-3">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="itemName">Item Name</label>
+      <input type="text" class="form-control" id="itemName" placeholder="">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="itemDescription">itemDescription</label>
+      <input type="text" class="form-control" id="itemDescription" placeholder="">
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-group">
+      <label for="itemWeight">itemWeight</label>
+      <input type="text" class="form-control" id="itemWeight" placeholder="">
+    </div>
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label for="itemStorageLocation">itemStorageLocation</label>
+      <input type="text" class="form-control" id="itemStorageLocation" placeholder="">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="itemQuantityInStorage">itemQuantityInStorage</label>
+      <input type="text" class="form-control" id="itemQuantityInStorage" placeholder="">
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="form-group">
+      <label for="itemQuantityInPackingList">itemQuantityInPackingList</label>
+      <input type="text" class="form-control" id="itemQuantityInPackingList" placeholder="">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+</div>
   {{#section 'scripts'}}
   <script type="text/javascript" src="js/gear.js"></script>
   {{/section}}
