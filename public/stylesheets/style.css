@@ -3,13 +3,9 @@ form.login {
   margin-top: 50px;
 }
 /*  
-/*  
-*/
-/* index.handlebars (Landing page) styling */
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap"); 
-  
 
-.class-for-index {
+/* index.handlebars (Landing page) styling */
+body {
   background: url(../img/nathan-dumlao-pLoMDKtl-JY-unsplash\ \(1\).jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,29 +25,27 @@ form.login {
   color: #22d8ba;
   background-color: transparent;
   border-color: transparent;
+  font-weight: bold;
 }
 .welcome-index {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-top: 15rem;
-  /* padding: 1rem; */
-  font-family: Oswald;
+  font-family: ''Arial'', 'Helvetica', 'sans-serif';
   font-weight: 50;
   text-transform: uppercase;
-  letter-spacing: .5rem;
+  letter-spacing: .2rem;
   font-style: italic;
   text-shadow: 2px 2px #02020252;
+  font-weight: bold;
+
 }
 .index-sub {
   text-shadow: 2px 2px #02020252;
 }
- /*  
-*/
+/*  
+
+
 /* signup.handlebars (sign up page) */
-.class-signup {
-  background: linear-gradient(to bottom right,#013042, #167B6B);
-  height: 100vh;
-  color: rgba(255, 255, 255, 0.897);
-}
 .signup-save-btn.btn.btn-round {
   padding: 0.7rem;
   padding-left: 5rem;
@@ -59,6 +53,9 @@ form.login {
   color: white;
   background-color: #1DB49B;
 
+}
+.signup-input-email, .signup-input-pass {
+  background-color: rgba(255, 255, 255, 0.363);
 }
 .fa.fa-user-circle {
   color: #0A6B6D;
@@ -74,23 +71,15 @@ form.login {
 p.account {
   font-size: 10px;
   margin: 0.25rem;
+  text-shadow: 2px 2px #02020252;
 }
 .signup-colomn {
-  background-color: #013042d0;
+  background-color: #01304281;
 }
-/* #signup-email-input, #signup-password-input, #signup-name-input{
-  
-} */
 /*
-*/
-.login {
-  background-image:url(../img/nathan-dumlao-pLoMDKtl-JY-unsplash\ \(1\).jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  color: white;
-}
+
+
+/* login.handlebars page */
 .login-page-cont {
   background-color: rgba(155, 153, 153, 0.144);
   backdrop-filter: blur(2px);
@@ -99,9 +88,11 @@ p.account {
 .login-input-email, .login-input-pass {
   background-color: rgba(255, 255, 255, 0.363);
 }
-a.signup-link {
+a.signup-link, .home-link {
   color: #1DB49B;
+  
 }
 p.signup-link {
   margin-top: 3rem;
 }
+/*
