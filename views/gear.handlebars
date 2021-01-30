@@ -6,19 +6,22 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <div class="navbar-nav ml-auto">
-            <a class="navbar-brand" href="/logout">Logout</a>
+            <a class="navbar-brand text-dark" href="/logout">Logout</a>
             </div>
       </div>
   </div>
 </nav>
-    
+
 {{!-- gear items table --}}
 <div class="container">
   <div class="row">
       <div class="card">
         <div class="card-body">
-            <h5 class="card-title text-center">Gear Items Inventory List</h5>
-              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalCenter">Add item</button>
+            <h3 class="card-title text-center text-dark">Gear Items Inventory List</h3>
+            <div class="">
+              <button type="button" class="addItem-btn btn text-light" data-toggle="modal" data-target="#modal1">Add item</button>
+              <button type="button" class="packedList-btn btn text-light" data-toggle="modal" data-target="#modal2">Packed items</button>
+            </div>
           <div class="table-wrapper-scroll-y my-custom-scrollbar ">
             <table class="table table-striped">
               <thead class="thead-light">
@@ -45,7 +48,7 @@
                     <td>{{dataValues.itemQuantityInStorage}}</td>
                     <td>{{dataValues.itemQuantityInPackingList}}</td>
                       <td><button data-id={{dataValues.id}} data-storage={{dataValues.itemQuantityInStorage}} type="submit" class="pack-item btn btn-info" data-order="true">Pack</button></td>
-                      <td><button data-id={{dataValues.id}} data-packed={{dataValues.itemQuantityInPackingList}} type="submit" class="unpack-item btn btn-info" data-order="true">Unpack</button></td>
+                      <td><button data-id={{dataValues.id}} data-packed={{dataValues.itemQuantityInPackingList}} type="submit" class="unpack-item btn btn-secondary" data-order="true">Unpack</button></td>
                       <td><button data-id={{dataValues.id}} type="submit" class="delete-item btn btn-danger" data-order="true">Delete</button></td>
                     </tr>
                     {{/each}}
@@ -57,18 +60,17 @@
   </div>
 </div>
 
-  <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Add a new item to your inventory</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form id="createForm" class="row g-3">
+ <!-- Add Item Modal -->
+<div class="modal hide fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Add a new item to your inventory</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel"></h4>
+          </div>
+          <div class="modal-body">
+            <form id="createForm" class="row g-3">
           <div class="col-md-6">
             <div class="form-group">
               <label for="itemName">Item Name</label>
@@ -106,12 +108,43 @@
             </div>
           </div>
           <div class="col-md-6">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-info">Submit</button>
           </div>
         </form>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+
+<!-- Packed Items Modal -->
+<div class="modal hide fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle2">List of Packed Items</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel"></h4>
+          </div>
+          <div class="modal-body">
+            <ul>
+              {{#each gearData}}
+              <li>
+                {{dataValues.itemName}}
+                {{dataValues.itemQuantityInPackingList}}
+                {{!-- above is incorrect --}}
+                {{!-- get request for packed items with number greater than 0? --}}
+              </li>
+              {{/each}}
+            </ul>
+            {{!-- <div class="col-md-6"> --}}
+            {{!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> --}}
+            {{!-- </div> --}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   {{#section 'scripts'}}
   <script type="text/javascript" src="js/gear.js"></script>
   {{/section}}
