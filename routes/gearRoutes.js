@@ -5,6 +5,7 @@ const router = express.Router();
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 // Needed to for column comparison
 const { Op } = require("sequelize");
+const { sequelize } = require("../models");
 
 // // Gear Routes
 // GET route for displaying all items in Gear (and their associated values)
@@ -79,6 +80,44 @@ router.put("/api/gear/:id", isAuthenticated, (req, res) => {
       UserId: req.user.id
     }
   }).then(Gear => {
+    res.json(Gear);
+  });
+});
+
+router.put("/api/gear/:id/pack", isAuthenticated, (req, res) => {
+  db.Gear.update(
+    {
+      itemQuantityInPackingList: sequelize.literal(
+        "itemQuantityInPackingList + 1"
+      ),
+      itemQuantityInStorage: sequelize.literal("itemQuantityInStorage - 1")
+    },
+    {
+      where: {
+        id: req.params.id,
+        UserId: req.user.id
+      }
+    }
+  ).then(Gear => {
+    res.json(Gear);
+  });
+});
+
+router.put("/api/gear/:id/unpack", isAuthenticated, (req, res) => {
+  db.Gear.update(
+    {
+      itemQuantityInPackingList: sequelize.literal(
+        "itemQuantityInPackingList - 1"
+      ),
+      itemQuantityInStorage: sequelize.literal("itemQuantityInStorage + 1")
+    },
+    {
+      where: {
+        id: req.params.id,
+        UserId: req.user.id
+      }
+    }
+  ).then(Gear => {
     res.json(Gear);
   });
 });

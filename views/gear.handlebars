@@ -1,45 +1,44 @@
 <nav class="navbar navbar-light navbar-expand-lg ">
-      <div class="container">
+      <div class="container text-dark">
       <h2>Welcome <span class="member-name"></span></h2>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <div class="navbar-nav ml-auto">
-            <a class="navbar-brand" href="/logout">Logout</a>
+            <a class="navbar-brand text-dark" href="/logout">Logout</a>
             </div>
       </div>
   </div>
 </nav>
-    
-{{!-- gear items table --}}
-<div class="container ">
-  <div class="row">
-    <div class="col-12">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Gear Items Inventory List</h5>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th class="item">Item</th>
-                    <th class="type">Description</th>
-                    <th class="type">Wgt.</th>
-                    <th class="item">Storage Location</th>
-                    <th class="onhand">Qty. On Hand</th>
-                    <th class="onhand">Qty. Desired</th>
-                    <th class="packed">Qty. Packed</th>
-                    {{!-- <th class="packed">Qty. Desired</th>
-                    <th class="total">Total Purchase Require</th>
-                    <th class="made">Purchase Qty. Made</th> --}}
 
-                    <th>Update</th>  
-                      <th>Delete</th>
+{{!-- gear items table --}}
+<div class="container">
+  <div class="row">
+      <div class="card">
+        <div class="card-body">
+            <h3 class="card-title text-center text-dark">Gear Items Inventory List</h3>
+            <div class="">
+              <button type="button" class="addItem-btn btn text-light" data-toggle="modal" data-target="#modal1">Add item</button>
+              <button type="button" class="packedList-btn btn text-light" data-toggle="modal" data-target="#modal2">Packed items</button>
+            </div>
+          <div class="table-wrapper-scroll-y my-custom-scrollbar ">
+            <table class="table table-striped">
+              <thead class="thead-light">
+                <tr>
+                  <th class="itemName">Item Name</th>
+                    <th class="itemDescription">Description</th>
+                    <th class="itemWeight">Weight (Oz.)</th>
+                    <th class="itemStorageLocation">Storage Location</th>
+                    <th class="itemQuantityInStorage">Quantity in Storage</th>
+                    <th class="itemQuantityInPackingList">Quantitiy in Packing List</th>
+                    <th class="actions">Actions</th> 
+                    <th></th>
+                    <th></th>
                   </tr>
-                </thead>
-                <tbody>
-                  
-                    {{!-- <th scope="row">1</th> --}}
+              </thead>
+                
+              <tbody>
                     {{#each gearData}}
                     <tr>
                     <td>{{dataValues.itemName}}</td>
@@ -48,67 +47,104 @@
                     <td>{{dataValues.itemStorageLocation}}</td>
                     <td>{{dataValues.itemQuantityInStorage}}</td>
                     <td>{{dataValues.itemQuantityInPackingList}}</td>
-                    <td>{{dataValues.UserId}}</td>
-                      <td><a data-id={{id}} class="edit-item" type="submit" data-order="true"><strong>Edit</strong></a></td>
-                      <td><a data-id={{id}} class="delete-item" type="submit" data-order="true"><strong>Delete</strong></a></td>
+                      <td><button data-id={{dataValues.id}} data-storage={{dataValues.itemQuantityInStorage}} type="submit" class="pack-item btn btn-info" data-order="true">Pack</button></td>
+                      <td><button data-id={{dataValues.id}} data-packed={{dataValues.itemQuantityInPackingList}} type="submit" class="unpack-item btn btn-secondary" data-order="true">Unpack</button></td>
+                      <td><button data-id={{dataValues.id}} type="submit" class="delete-item btn btn-danger" data-order="true">Delete</button></td>
                     </tr>
                     {{/each}}
-                  
-                </tbody>
-              </table>
-            </div>
-          </div>
+              </tbody>
+          </table>
         </div>
       </div>
     </div>
   </div>
-{{!-- form input area --}}
-<div class="container">
-  <p>Add a new item to your inventory</p>
-  <form class="row g-3">
-  <div class="col-md-6">
-    <div class="form-group">
-      <label for="itemName">Item Name</label>
-      <input type="text" class="form-control" id="itemName" placeholder="">
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="form-group">
-      <label for="itemDescription">itemDescription</label>
-      <input type="text" class="form-control" id="itemDescription" placeholder="">
-    </div>
-  </div>
-  <div class="col-12">
-    <div class="form-group">
-      <label for="itemWeight">itemWeight</label>
-      <input type="text" class="form-control" id="itemWeight" placeholder="">
-    </div>
-  </div>
-  <div class="col-12">
-    <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="col-md-6">
-    <div class="form-group">
-      <label for="itemStorageLocation">itemStorageLocation</label>
-      <input type="text" class="form-control" id="itemStorageLocation" placeholder="">
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="form-group">
-      <label for="itemQuantityInStorage">itemQuantityInStorage</label>
-      <input type="text" class="form-control" id="itemQuantityInStorage" placeholder="">
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="form-group">
-      <label for="itemQuantityInPackingList">itemQuantityInPackingList</label>
-      <input type="text" class="form-control" id="itemQuantityInPackingList" placeholder="">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </div>
-</form>
 </div>
+
+ <!-- Add Item Modal -->
+<div class="modal hide fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Add a new item to your inventory</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel"></h4>
+          </div>
+          <div class="modal-body">
+            <form id="createForm" class="row g-3">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="itemName">Item Name</label>
+              <input type="text" class="form-control" id="itemName" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="itemDescription">Description</label>
+              <input type="text" class="form-control" id="itemDescription" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="itemWeight">Weight</label>
+              <input type="text" class="form-control" id="itemWeight" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="itemStorageLocation">Storage Location</label>
+              <input type="text" class="form-control" id="itemStorageLocation" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="itemQuantityInStorage">Quantity in Storage</label>
+              <input type="text" class="form-control" id="itemQuantityInStorage" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="itemQuantityInPackingList">Quantity in Packing List</label>
+              <input type="text" class="form-control" id="itemQuantityInPackingList" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <button type="submit" class="btn btn-info">Submit</button>
+          </div>
+        </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Packed Items Modal -->
+<div class="modal hide fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle2">List of Packed Items</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel"></h4>
+          </div>
+          <div class="modal-body">
+            <ul>
+              {{#each gearData}}
+              <li>
+                {{dataValues.itemName}}
+                {{dataValues.itemQuantityInPackingList}}
+                {{!-- above is incorrect --}}
+                {{!-- get request for packed items with number greater than 0? --}}
+              </li>
+              {{/each}}
+            </ul>
+            {{!-- <div class="col-md-6"> --}}
+            {{!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> --}}
+            {{!-- </div> --}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   {{#section 'scripts'}}
   <script type="text/javascript" src="js/gear.js"></script>
   {{/section}}

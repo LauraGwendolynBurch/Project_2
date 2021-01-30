@@ -13,10 +13,10 @@ body {
   height: 100vh;
   color: white;
 }
-.index-login-btn.btn.btn-round, .login-login-btn {
+.index-login-btn.btn.btn-round, .login-login-btn, .signup-login-btn.btn.btn-round  {
   padding: 0.7rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
   color: #0A6B6D;
   font-weight: bold;
 }
@@ -26,6 +26,8 @@ body {
   background-color: transparent;
   border-color: transparent;
   font-weight: bold;
+  font-size: 1rem;
+  text-shadow: 2px 2px #02020252;
 }
 .welcome-index {
   font-size: 3rem;
@@ -61,13 +63,13 @@ body {
   color: #0A6B6D;
   font-size: 8rem;
 }
-.signup-login-btn.btn.btn-round {
+/* .signup-login-btn.btn.btn-round {
   padding: 0.7rem;
   padding-left: 5rem;
   padding-right: 5rem;
   color: white;
-  border-color: #1DB49B;
-}
+  background-color: rgba(255, 255, 255, 0.493);
+} */
 p.account {
   font-size: 10px;
   margin: 0.25rem;
@@ -100,4 +102,36 @@ p.signup-link {
 
 .card-title {
   color: black;
+}
+
+.modal-content {
+  color: black;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 65vh;
+  overflow: auto;
+  }
+  .table-wrapper-scroll-y {
+  display: block;
+  }
+
+.addItem-btn {
+  background-color: #0A6B6D;
+  margin-bottom: .5rem; 
+  margin-right: .5rem; 
+}
+
+.packedList-btn {
+  background-color: #1DB49B;
+  margin-bottom: .5rem;
+}
+.modal-content {
+  border: none;
+}
+.modal-header, .modal-body{
+  background-color: #1DB49B;
+  color: white;
+
 }
