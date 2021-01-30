@@ -21,7 +21,7 @@ An application that uses mySQL, Sequelize, Node.js and Handlebars to help you in
 
 ## Locations
 
-Deployed Application Link: [link]
+Deployed Application Link: https://secret-harbor-98103.herokuapp.com/
 
 GitHub Repository Link: https://github.com/LauraGwendolynBurch/Project_2
 
@@ -37,7 +37,7 @@ In it's current Minimal Viable Product iteration, Meili is a SQL database applic
 
 Account Creation and Login
 
-1. Click the '[Deployed Application Link]()' provided in the '[Location](#location)' section.
+1. Click the '[Deployed Application Link](https://secret-harbor-98103.herokuapp.com/)' provided in the '[Location](#location)' section.
 2. Click 'create account'.
 3. Enter your email and create a password.
 4. Save your login info to your notes for future use.
@@ -66,12 +66,12 @@ Pack and Unpack Items in the Inventory
 
 ## Installation
 
-No installation is required for running the deployed version of Meili. Simply click the '[Deployed Application Link]()' provided in the '[Location](#location)' section to get started.
+No installation is required for running the deployed version of Meili. Simply click the '[Deployed Application Link](https://secret-harbor-98103.herokuapp.com/)' provided in the '[Location](#location)' section to get started.
 
 When downloading and running the application locally, use the following steps:
 
 1. Install mySQL and MySQL workbench using the directions outlined in the '[MySQL Installation Guide](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)'.
-2. Open the '[Deployed Application Link]()' in the '[Location](#location)' section.
+2. Open the '[Deployed Application Link](https://secret-harbor-98103.herokuapp.com/)' in the '[Location](#location)' section.
 3. Clone the repository to your computer.
 4. Open a new terminal instance in the Meili code file and run "npm init -y" to install the necessary node modules.
 5. Create a .env file in the root of the directory with the following data:
