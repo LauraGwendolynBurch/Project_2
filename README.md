@@ -18,7 +18,7 @@ A application that mySQL, Sequelize, Node.js and Handlebars to help you track an
 
 ## Location
 
-Deployed Application Link: 
+Deployed Application Link: (heroku link)
 
 GitHub Repository Link: https://github.com/LauraGwendolynBurch/Project_2
 
@@ -28,11 +28,11 @@ GitHub Repository Link: https://github.com/LauraGwendolynBurch/Project_2
 
 ## Installation
 
-Do this...
+When running the deployed application, there should be no need for installation on the client side. Just click our deployed application link.
 
 ## Usage
 
-Use this...
+This application is meant to serve as an organizational aid for outdoor enthusiasts and professionals. After the user has created their account, they will be 
 
 ## Testing
 
