@@ -87,8 +87,29 @@ router.put("/api/gear/:id", isAuthenticated, (req, res) => {
 router.put("/api/gear/:id/pack", isAuthenticated, (req, res) => {
   db.Gear.update(
     {
-      itemQuantityInPackingList: sequelize.literal("itemQuantityInStorage"),
-      itemQuantityInStorage: sequelize.literal("0")
+      itemQuantityInPackingList: sequelize.literal(
+        "itemQuantityInPackingList + 1"
+      ),
+      itemQuantityInStorage: sequelize.literal("itemQuantityInStorage - 1")
+    },
+    {
+      where: {
+        id: req.params.id,
+        UserId: req.user.id
+      }
+    }
+  ).then(Gear => {
+    res.json(Gear);
+  });
+});
+
+router.put("/api/gear/:id/unpack", isAuthenticated, (req, res) => {
+  db.Gear.update(
+    {
+      itemQuantityInPackingList: sequelize.literal(
+        "itemQuantityInPackingList - 1"
+      ),
+      itemQuantityInStorage: sequelize.literal("itemQuantityInStorage + 1")
     },
     {
       where: {
