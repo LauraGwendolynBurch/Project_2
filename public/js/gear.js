@@ -27,6 +27,7 @@ $(document).ready(() => {
     });
   }
 
+  // eslint-disable-next-line no-unused-vars
   $(".delete-item").on("click", function(event) {
     const id = $(this).data("id");
     // Send the DELETE request.

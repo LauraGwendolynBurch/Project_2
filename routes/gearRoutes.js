@@ -1,8 +1,10 @@
 const express = require("express");
 const db = require("../models");
 const router = express.Router();
+
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
+
 // Needed to for column comparison
 const { Op } = require("sequelize");
 const { sequelize } = require("../models");
