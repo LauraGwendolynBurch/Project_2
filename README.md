@@ -21,15 +21,15 @@ An application that uses mySQL, Sequelize, Node.js and Handlebars to help you in
 
 ## Locations
 
-Deployed Application Link: https://...
+Deployed Application Link: [link]
 
 GitHub Repository Link: https://github.com/LauraGwendolynBurch/Project_2
 
 ## Application Summary
 
-This application borrows it's name from Meili, the Norse God of Travel. The name "Meili" translates to "Mile Stepper" and this application was made with the needs of modern-day milesteppers in mind. Hiking, camping and wilderness activity in general all require a certain level of preplanning, organization and preparedness if they are to be enjoyable and safe. One crucial aspect of preparing for an outing is stocking one's pack with the gear and supplies you need to have a comfortable outing and make it home in one piece. This is where Meili comes in!
+This application borrows it's name from Meili, the Norse God of Travel. The name "Meili" translates to "Mile Stepper" and this application was made with the needs of modern-day milesteppers in mind. Hiking, camping and wilderness activity in general all require a certain level of preplanning, organization and preparedness if they are to be enjoyable and safe. One crucial aspect of preparing for an outing is stocking one's pack with the gear and supplies needed to have a comfortable outing and make it home in one piece. This is where Meili comes in!
 
-In it's current Minimal Viable Product iteration, Meili is a SQL database application which allows the user add their outdoor gear to a centralized inventory to track where there equipment is stored, the item's weight and quantity, and identify which items they are going to take with them on their next outing. 
+In it's current Minimal Viable Product iteration, Meili is a SQL database application which allows a user to add their outdoor gear to a centralized inventory. In this inventory, a user can track where their equipment is stored, as well as details regarding weight and quantity, and which gear is going with them on their next trip. 
 
 ![Landing Page Stillshot]()
 
@@ -40,7 +40,7 @@ Account Creation and Login
 1. Click the '[Deployed Application Link]()' provided in the '[Location](#location)' section.
 2. Click 'create account'.
 3. Enter your email and create a password.
-4. Save your login info to your notes for future use!
+4. Save your login info to your notes for future use.
 
 ![Account Creation Demo]()
 
@@ -50,9 +50,19 @@ Add and Delete Items to the Inventory
 2. Click the 'add item' to initiate the item creation form.
 3. Fill in all item information fields and click 'submit' to add it to your inventory.
 4. The item and it's information will populate in the inventory table. 
-5. To delete items from the inventory, click the 'delete' button.
+5. To delete an item row from the inventory, click the 'delete' button.
 
 ![Add/Delete Demo]()
+
+Pack and Unpack Items in the Inventory
+
+1. Items currently in the packing list can be viewed by clicking on the 'packed items' button.
+2. To add an item to the packing list click the 'pack' button in the corresponding item row.
+3. To remove an item from the packing list, click the 'unpack' button in the corresponding item row.
+4. Each button click will move one quantity of each item from it's corresponding row. 
+5. Use multiple clicks to move multiple quantities from the same item row.
+
+![Pack/Unpack Demo]()
 
 ## Installation
 
