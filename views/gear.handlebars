@@ -15,35 +15,25 @@
 {{!-- gear items table --}}
 <div class="container ">
   <div class="row">
-    <div class="col-12">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title text-center">Gear Items Inventory List</h5>
-              <div>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Add item</button>
-                </div>
-
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th class="item">Item</th>
-                    <th class="type">Description</th>
-                    <th class="type">Wgt.</th>
-                    <th class="item">Storage Location</th>
-                    <th class="onhand">Qty. On Hand</th>
-                    <th class="onhand">Qty. Desired</th>
-                    <th class="packed">Qty. Packed</th>
-                    {{!-- <th class="packed">Qty. Desired</th>
-                    <th class="total">Total Purchase Require</th>
-                    <th class="made">Purchase Qty. Made</th> --}}
-
-                    <th>Update</th>  
-                      <th>Delete</th>
+      <div class="card">
+        <div class="card-body">
+            <h5 class="card-title text-center">Gear Items Inventory List</h5>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Add item</button>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="itemName">Item Name</th>
+                    <th class="itemDescription">Description</th>
+                    <th class="itemWeight">Weight (Oz.)</th>
+                    <th class="itemStorageLocation">Storage Location</th>
+                    <th class="itemQuantityInStorage">Quantity in Storage</th>
+                    <th class="itemQuantityInPackingList">Quantitiy in Packing List</th>
+                    <th class="actions">Actions</th> 
+                    <th></th>
                   </tr>
-                </thead>
-                <tbody>
-                  
-                    {{!-- <th scope="row">1</th> --}}
+              </thead>
+                
+              <tbody>
                     {{#each gearData}}
                     <tr>
                     <td>{{dataValues.itemName}}</td>
@@ -52,20 +42,16 @@
                     <td>{{dataValues.itemStorageLocation}}</td>
                     <td>{{dataValues.itemQuantityInStorage}}</td>
                     <td>{{dataValues.itemQuantityInPackingList}}</td>
-                    <td>{{dataValues.UserId}}</td>
                       <td><button data-id={{id}} type="submit" class="edit-item btn btn-primary" data-order="true">Edit</button></td>
                       <td><button data-id={{id}} type="submit" class="delete-item btn btn-danger" data-order="true">Delete</button></td>
                     </tr>
                     {{/each}}
-                  
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+              </tbody>
+          </table>
       </div>
     </div>
   </div>
+</div>
 
   <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -78,7 +64,55 @@
         </button>
       </div>
       <div class="modal-body">
-        <form class="row g-3">
+        <form id="createForm" class="row g-3">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="itemName">Item Name</label>
+              <input type="text" class="form-control" id="itemName" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="itemDescription">itemDescription</label>
+              <input type="text" class="form-control" id="itemDescription" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="itemWeight">itemWeight</label>
+              <input type="text" class="form-control" id="itemWeight" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="itemStorageLocation">itemStorageLocation</label>
+              <input type="text" class="form-control" id="itemStorageLocation" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="itemQuantityInStorage">itemQuantityInStorage</label>
+              <input type="text" class="form-control" id="itemQuantityInStorage" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="itemQuantityInPackingList">itemQuantityInPackingList</label>
+              <input type="text" class="form-control" id="itemQuantityInPackingList" placeholder="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+  {{#section 'scripts'}}
+  <script type="text/javascript" src="js/gear.js"></script>
+  {{/section}}
+
+{{!-- <form class="row g-3">
           <div class="col-md-6">
             <div class="form-group">
               <label for="itemName">Item Name</label>
@@ -120,54 +154,5 @@
               </div>
           </div>
             </div>
-        </form>
+        </form> --}}
     
-    </div>
-  </div>
-</div>
-{{!-- form input area --}}
-{{!-- <div class="container">
-  <p>Add a new item to your inventory</p>
-  <form class="row g-3">
-  <div class="col-md-6">
-    <div class="form-group">
-      <label for="itemName">Item Name</label>
-      <input type="text" class="form-control" id="itemName" placeholder="">
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="form-group">
-      <label for="itemDescription">itemDescription</label>
-      <input type="text" class="form-control" id="itemDescription" placeholder="">
-    </div>
-  </div>
-  <div class="col-12">
-    <div class="form-group">
-      <label for="itemWeight">itemWeight</label>
-      <input type="text" class="form-control" id="itemWeight" placeholder="">
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="form-group">
-      <label for="itemStorageLocation">itemStorageLocation</label>
-      <input type="text" class="form-control" id="itemStorageLocation" placeholder="">
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="form-group">
-      <label for="itemQuantityInStorage">itemQuantityInStorage</label>
-      <input type="text" class="form-control" id="itemQuantityInStorage" placeholder="">
-    </div>
-  </div>
-  <div class="col-md-2">
-    <div class="form-group">
-      <label for="itemQuantityInPackingList">itemQuantityInPackingList</label>
-      <input type="text" class="form-control" id="itemQuantityInPackingList" placeholder="">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </div>
-</form>
-</div> --}}
-  {{#section 'scripts'}}
-  <script type="text/javascript" src="js/gear.js"></script>
-  {{/section}}
