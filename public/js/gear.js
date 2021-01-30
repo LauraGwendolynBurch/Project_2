@@ -27,8 +27,7 @@ $(document).ready(() => {
     });
   }
 
-  // eslint-disable-next-line no-unused-vars
-  $(".delete-item").on("click", function(event) {
+  $(".delete-item").on("click", function() {
     const id = $(this).data("id");
     // Send the DELETE request.
     $.ajax("/api/gear/" + id, {
@@ -38,6 +37,36 @@ $(document).ready(() => {
       // Reload the page to get the updated list
       location.reload();
     });
+  });
+
+  $(".pack-item").on("click", function() {
+    const id = $(this).data("id");
+    const storage = $(this).data("storage");
+    // Send the PUT request.
+    if (storage > 0) {
+      $.ajax("/api/gear/" + id + "/pack", {
+        type: "PUT"
+      }).then(() => {
+        console.log("packed item", id);
+        // Reload the page to get the updated list
+        location.reload();
+      });
+    }
+  });
+
+  $(".unpack-item").on("click", function() {
+    const id = $(this).data("id");
+    const packed = $(this).data("packed");
+    // Send the PUT request.
+    if (packed > 0) {
+      $.ajax("/api/gear/" + id + "/unpack", {
+        type: "PUT"
+      }).then(() => {
+        console.log("unpacked item", id);
+        // Reload the page to get the updated list
+        location.reload();
+      });
+    }
   });
 
   $.get("/api/user_data").then(data => {
