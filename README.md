@@ -31,7 +31,7 @@ This application borrows it's name from Meili, the Norse God of Travel. The name
 
 In it's current Minimal Viable Product iteration, Meili is a SQL database application which allows a user to add their outdoor gear to a centralized inventory. In this inventory, a user can track where their equipment is stored, as well as details regarding weight and quantity, and which gear is going with them on their next trip. 
 
-![Landing Page Stillshot]()
+![Landing Page Stillshot](https://github.com/LauraGwendolynBurch/Project_2/blob/main/public/img/landing-page-still.png)
 
 ## Usage Instructions
 
@@ -42,7 +42,7 @@ Account Creation and Login
 3. Enter your email and create a password.
 4. Save your login info to your notes for future use.
 
-![Account Creation Demo]()
+![Account Creation Demo](https://github.com/LauraGwendolynBurch/Project_2/blob/main/public/img/create-account-demo.gif)
 
 Add and Delete Items to the Inventory
 
@@ -52,7 +52,7 @@ Add and Delete Items to the Inventory
 4. The item and it's information will populate in the inventory table. 
 5. To delete an item row from the inventory, click the 'delete' button.
 
-![Add/Delete Demo]()
+![Add/Delete Demo](https://github.com/LauraGwendolynBurch/Project_2/blob/main/public/img/add-delete-item-demo.gif)
 
 Pack and Unpack Items in the Inventory
 
@@ -62,7 +62,7 @@ Pack and Unpack Items in the Inventory
 4. Each button click will move one quantity of each item from it's corresponding row. 
 5. Use multiple clicks to move multiple quantities from the same item row.
 
-![Pack/Unpack Demo]()
+![Pack/Unpack Demo](https://github.com/LauraGwendolynBurch/Project_2/blob/main/public/img/pack-unpack-demo.gif)
 
 ## Installation
 
