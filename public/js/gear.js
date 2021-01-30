@@ -27,17 +27,17 @@ $(document).ready(() => {
     });
   }
 
-  //   $(".delete-item").on("click", function(event) {
-  //   const id = $(this).data("id");
-  //   // Send the DELETE request.
-  //   $.ajax("/api/gear/" + id, {
-  //     type: "DELETE"
-  //   }).then(() => {
-  //     console.log("deleted item", id);
-  //     // Reload the page to get the updated list
-  //     location.reload();
-  //   });
-  // });
+  $(".delete-item").on("click", function(event) {
+    const id = $(this).data("id");
+    // Send the DELETE request.
+    $.ajax("/api/gear/" + id, {
+      type: "DELETE"
+    }).then(() => {
+      console.log("deleted item", id);
+      // Reload the page to get the updated list
+      location.reload();
+    });
+  });
 
   $.get("/api/user_data").then(data => {
     $(".member-name").text(data.email);
