@@ -116,3 +116,22 @@ p.signup-link {
   .table-wrapper-scroll-y {
   display: block;
   }
+
+.addItem-btn {
+  background-color: #0A6B6D;
+  margin-bottom: .5rem; 
+  margin-right: .5rem; 
+}
+
+.packedList-btn {
+  background-color: #1DB49B;
+  margin-bottom: .5rem;
+}
+.modal-content {
+  border: none;
+}
+.modal-header, .modal-body{
+  background-color: #1DB49B;
+  color: white;
+
+}
