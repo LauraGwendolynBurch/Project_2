@@ -26,6 +26,8 @@ body {
   background-color: transparent;
   border-color: transparent;
   font-weight: bold;
+  font-size: 1rem;
+  text-shadow: 2px 2px #02020252;
 }
 .welcome-index {
   font-size: 3rem;
