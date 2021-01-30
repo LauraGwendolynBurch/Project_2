@@ -1,7 +1,7 @@
 // Requiring path to so we can use relative routes to our HTML files
-
 const router = require("express").Router();
 const db = require("../models");
+
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
