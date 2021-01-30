@@ -13,14 +13,15 @@
 </nav>
     
 {{!-- gear items table --}}
-<div class="container ">
+<div class="container">
   <div class="row">
       <div class="card">
         <div class="card-body">
             <h5 class="card-title text-center">Gear Items Inventory List</h5>
               <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalCenter">Add item</button>
-            <table class="table">
-              <thead>
+          <div class="table-wrapper-scroll-y my-custom-scrollbar ">
+            <table class="table table-striped">
+              <thead class="thead-light">
                 <tr>
                   <th class="itemName">Item Name</th>
                     <th class="itemDescription">Description</th>
@@ -44,11 +45,12 @@
                     <!-- td>{{dataValues.itemQuantityInPackingList}}</td -->
                     <td>{{dataValues.itemQuantityInPackingList}}</td>
                       <td><button data-id={{id}} type="submit" class="edit-item btn btn-info" data-order="true">Edit</button></td>
-                      <td><button data-id={{id}} type="submit" class="delete-item btn btn-danger" data-order="true">Delete</button></td>
+                      <td><button data-id={{dataValues.id}} type="submit" class="delete-item btn btn-danger" data-order="true">Delete</button></td>
                     </tr>
                     {{/each}}
               </tbody>
           </table>
+        </div>
       </div>
     </div>
   </div>
@@ -112,48 +114,3 @@
   {{#section 'scripts'}}
   <script type="text/javascript" src="js/gear.js"></script>
   {{/section}}
-
-{{!-- <form class="row g-3">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="itemName">Item Name</label>
-              <input type="text" class="form-control" id="itemName" placeholder="">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="itemDescription">Description</label>
-              <input type="text" class="form-control" id="itemDescription" placeholder="">
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="form-group">
-              <label for="itemWeight">Weight</label>
-              <input type="text" class="form-control" id="itemWeight" placeholder="">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="itemStorageLocation">Storage Location</label>
-              <input type="text" class="form-control" id="itemStorageLocation" placeholder="">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="itemQuantityInStorage">Quantity</label>
-              <input type="text" class="form-control" id="itemQuantityInStorage" placeholder="">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="itemQuantityInPackingList">Quantity to pack</label>
-              <input type="text" class="form-control" id="itemQuantityInPackingList" placeholder="">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
-          </div>
-            </div>
-        </form> --}}
-    
